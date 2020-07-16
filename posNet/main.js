@@ -60,27 +60,32 @@ function draw() {
 
   //posLevelSmooth += (size.x - posLevelSmooth) * 0.08
   //lettera.style["font-size"] = 500 + "px"; 
-  lettera.style["font-size"] = size.x/3 + "px"; //dimensione varia alla distanza
+  lettera.style["font-size"] = size.x/5 + "px"; //dimensione varia alla distanza
 
   //misuro dimensioni pagina per JS
   //const width = window.innerWidth
   //const height = window.innerHeight
  
   const deep = size.x/3
+  const heightLetter = size.x/5
   const x = map(pos.x,width/2,width, 0,width)
-  let level = map(deep/2, 0, 300, -100,100)
+  let level = map(deep/2, 0, 300, 0,100)
 
 
   console.log(deep)
   //map
   const w = deep / width * 1000.0
-  const prova = floor(map(deep,0,300,-100,100))
+  //mappa il livello di  distanza deep con i valori del font variabille
+  const prova = floor(map(deep/4,50,200,0,300))
   const c = x / width * 1000.0
 
   //Il CSS che va a modificare
-  lettera.style["font-variation-settings"] = " 'SAJO' " + prova
+  lettera.style["font-variation-settings"] = " 'SIZE' " + prova
   //+ "," + " 'CONT' " + c;
-  lettera.style.transform = "translateY(-" + deep*0.7 + "px)";
+
+  //per trasformare la posizione e inserire la lettera centrale 
+  //heightLetter deve avere lo stesso valore di "font-size"
+  lettera.style.transform = "translateY(-" + heightLetter*0.7 + "px)";
 
   //console.log(w)
   //console.log(c)
