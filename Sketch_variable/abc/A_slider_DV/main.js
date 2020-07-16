@@ -18,7 +18,7 @@ function setup(){
   noStroke();
 
   // Slider(inizio, fine, iniziale)
-  wSlider = createSlider(-100, 100, 0);
+  wSlider = createSlider(0, 300, 0);
   wSlider.position(30, height-100);
   // cSlider = createSlider(75, 125, 0);
   // cSlider.position(width/2-wSlider.width/2, height-100);
@@ -44,7 +44,7 @@ function draw(){
   // line(iSlider.x+iSlider.height/2, height-100 + iSlider.height/2, iSlider.x + iSlider.width, height-100 + iSlider.height/2);
   // pop();
 
-  text('SAJO', wSlider.x + wSlider.width + 50, wSlider.y + wSlider.height);
+  text('SIZE', wSlider.x + wSlider.width + 50, wSlider.y + wSlider.height);
   // text('width', cSlider.x + cSlider.width + 50, cSlider.y + cSlider.height);
   // text('italic', iSlider.x + iSlider.width + 50, iSlider.y + iSlider.height);
 
@@ -52,7 +52,7 @@ function draw(){
   lettera.style["font-size"] = "500px";
 
   //css che va a modificare
-  lettera.style["font-variation-settings"] = " 'SAJO' " + w; //+ "," + " 'wdth' " + c + "," + " 'ital' " + i;
+  lettera.style["font-variation-settings"] = " 'SIZE' " + w; //+ "," + " 'wdth' " + c + "," + " 'ital' " + i;
 }
 
 // -- EVENTI ----------------------------------
