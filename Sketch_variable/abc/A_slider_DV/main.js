@@ -6,19 +6,19 @@ let fontRegular
 const lettera = document.getElementById("text")
 
 function preload() {
-  fontRegular = loadFont('SFNSDisplayCondensed-Regular.otf');
+  //fontRegular = loadFont('SFNSDisplayCondensed-Regular.otf');
 }
 
 function setup(){
   createCanvas(windowWidth,windowHeight);
 
   fill(255);
-  textFont(fontRegular);
+  //textFont(fontRegular);
   textSize(20);
   noStroke();
 
   // Slider(inizio, fine, iniziale)
-  wSlider = createSlider(0, 300, 0);
+  wSlider = createSlider(0, 300, 299);
   wSlider.position(30, height-100);
   // cSlider = createSlider(75, 125, 0);
   // cSlider.position(width/2-wSlider.width/2, height-100);
@@ -44,7 +44,7 @@ function draw(){
   // line(iSlider.x+iSlider.height/2, height-100 + iSlider.height/2, iSlider.x + iSlider.width, height-100 + iSlider.height/2);
   // pop();
 
-  text('SIZE', wSlider.x + wSlider.width + 50, wSlider.y + wSlider.height);
+  //text('SIZE', wSlider.x + wSlider.width + 50, wSlider.y + wSlider.height);
   // text('width', cSlider.x + cSlider.width + 50, cSlider.y + cSlider.height);
   // text('italic', iSlider.x + iSlider.width + 50, iSlider.y + iSlider.height);
 
