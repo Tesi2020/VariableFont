@@ -41,7 +41,7 @@ function draw(){
   const d = dSlider.value();
 
   text('Sadness/Joy', aSlider.x + aSlider.width + 50, aSlider.y + aSlider.height);
-  text('Anticipation/Surorise', bSlider.x + bSlider.width + 50, bSlider.y + bSlider.height);
+  text('Anticipation/Surprise', bSlider.x + bSlider.width + 50, bSlider.y + bSlider.height);
   text('Disgust/Trust', cSlider.x + cSlider.width + 50, cSlider.y + cSlider.height);
   text('Anger/Fear', dSlider.x + dSlider.width + 50, dSlider.y + dSlider.height);
 
