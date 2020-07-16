@@ -2,7 +2,6 @@ let aSlider
 let bSlider 
 let cSlider 
 let dSlider 
-let fontRegular
 
 //seleziono la lettera dall'HTML
 const lettera = document.getElementById("text")
@@ -15,7 +14,6 @@ function setup(){
   createCanvas(windowWidth,windowHeight);
 
   fill(255);
-  textFont(fontRegular);
   textSize(20);
   noStroke();
 
@@ -41,7 +39,6 @@ function draw(){
   const b = wSlider.value();
   const c = wSlider.value();
   const d = wSlider.value();
-  const w = wSlider.value();
 
   text('SAJO', aSlider.x + aSlider.width + 50, aSlider.y + aSlider.height);
   text('ANSU', bSlider.x + bSlider.width + 50, bSlider.y + bSlider.height);
