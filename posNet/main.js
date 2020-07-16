@@ -75,7 +75,7 @@ function draw() {
   console.log(deep)
   //map
   const w = deep / width * 1000.0
-  //mappa il livello di  distanza deep con i valori del font variabille
+  //mappa il livello di  distanza deep con i valori del font variabile
   const prova = floor(map(deep/4,50,200,0,300))
   const c = x / width * 1000.0
 
