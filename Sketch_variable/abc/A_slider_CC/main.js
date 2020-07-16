@@ -1,5 +1,7 @@
-let wSlider 
-// cSlider, iSlider;
+let aSlider 
+let bSlider 
+let cSlider 
+let dSlider 
 let fontRegular
 
 //seleziono la lettera dall'HTML
@@ -18,12 +20,15 @@ function setup(){
   noStroke();
 
   // Slider(inizio, fine, iniziale)
-  wSlider = createSlider(-100, 100, 0);
-  wSlider.position(30, height-100);
-  // cSlider = createSlider(75, 125, 0);
-  // cSlider.position(width/2-wSlider.width/2, height-100);
-  // iSlider = createSlider(0, 1, 0);
-  // iSlider.position(width-iSlider.width*2, height-100);
+  aSlider = createSlider(-100, 100, 0);
+  aSlider.position(30, height-100);  
+  bSlider = createSlider(-100, 100, 0);
+  bSlider.position(30, height-200);  
+  cSlider = createSlider(-100, 100, 0);
+  cSlider.position(30, height-300);  
+  dSlider = createSlider(-100, 100, 0);
+  dSlider.position(30, height-500);
+
 }
 
 
@@ -32,27 +37,22 @@ function draw(){
   const width = window.innerWidth
   const height = window.innerHeight
 
+  const a = wSlider.value();
+  const b = wSlider.value();
+  const c = wSlider.value();
+  const d = wSlider.value();
   const w = wSlider.value();
-  // const c = cSlider.value();
-  // const i = iSlider.value();
 
-  // push();
-  // stroke(255);
-  // strokeWeight(0.5);
-  // line(30+wSlider.height/2, height-100+wSlider.height/2,  wSlider.x+wSlider.width, height-100 + wSlider.height/2);
-  // line(width/2-cSlider.width/2+cSlider.height/2, height-100+cSlider.height/2, cSlider.x + cSlider.width, height-100+cSlider.height/2);
-  // line(iSlider.x+iSlider.height/2, height-100 + iSlider.height/2, iSlider.x + iSlider.width, height-100 + iSlider.height/2);
-  // pop();
-
-  text('SAJO', wSlider.x + wSlider.width + 50, wSlider.y + wSlider.height);
-  // text('width', cSlider.x + cSlider.width + 50, cSlider.y + cSlider.height);
-  // text('italic', iSlider.x + iSlider.width + 50, iSlider.y + iSlider.height);
+  text('SAJO', aSlider.x + aSlider.width + 50, aSlider.y + aSlider.height);
+  text('ANSU', bSlider.x + bSlider.width + 50, bSlider.y + bSlider.height);
+  text('DITR', cSlider.x + cSlider.width + 50, cSlider.y + cSlider.height);
+  text('ANFE', dSlider.x + dSlider.width + 50, dSlider.y + dSlider.height);
 
   //dimesnione font
   lettera.style["font-size"] = "500px";
 
   //css che va a modificare
-  lettera.style["font-variation-settings"] = " 'SAJO' " + w; //+ "," + " 'wdth' " + c + "," + " 'ital' " + i;
+  lettera.style["font-variation-settings"] = " 'SAJO' " + a + "," + " 'ANSU' " + b + "," + " 'DITR' " + c + "," + " 'ANFE' " + d;
 }
 
 // -- EVENTI ----------------------------------
