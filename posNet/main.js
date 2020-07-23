@@ -58,9 +58,16 @@ function modelLoaded() {
 
 function draw() {
 
-  //posLevelSmooth += (size.x - posLevelSmooth) * 0.08
+  //posLevelSmooth += (size.x - posLevelSmooth) * 0.09
   //lettera.style["font-size"] = 500 + "px"; 
-  lettera.style["font-size"] = size.x/5 + "px"; //dimensione varia alla distanza
+  // blocca alla dimensione massima
+  if(size.x/5 > 301) {
+      lettera.style["font-size"] = 300 + "px"; 
+  } else{
+      lettera.style["font-size"] = size.x/5 + "px"; //dimensione varia alla distanza
+  }
+
+
 
   //misuro dimensioni pagina per JS
   //const width = window.innerWidth
@@ -83,10 +90,23 @@ function draw() {
   lettera.style["font-variation-settings"] = " 'SIZE' " + prova
   //+ "," + " 'CONT' " + c;
 
+  if (size.x/5< 100){
+  // var theDiv = document.getElementById("text");
+  // var content = document.createTextNode("da scrivere");
+  // theDiv.appendChild(content)
+  // var div = document.getElementById('text');
+
+  // div.innerHTML += 'Extra stuff';
+
+  }
+
   //per trasformare la posizione e inserire la lettera centrale 
   //heightLetter deve avere lo stesso valore di "font-size"
-  lettera.style.transform = "translateY(-" + heightLetter*0.7 + "px)";
+//   if (size.x/5 > 301){
+//   lettera.style.transform = "translateY(-" + 300 *0.7 + "px)";
+// } else {lettera.style.transform = "translateY(-" + heightLetter*0.7 + "px)";
 
+// }
   //console.log(w)
   //console.log(c)
 
