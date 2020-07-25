@@ -61,8 +61,8 @@ function draw() {
   //posLevelSmooth += (size.x - posLevelSmooth) * 0.09
   //lettera.style["font-size"] = 500 + "px"; 
   // blocca alla dimensione massima
-  if(size.x/5 > 401) {
-      lettera.style["font-size"] = 400 + "px"; 
+  if(size.x/5 > 301) {
+      lettera.style["font-size"] = 300 + "px"; 
   } else{
       lettera.style["font-size"] = size.x/5 + "px"; //dimensione varia alla distanza
   }
@@ -83,7 +83,7 @@ function draw() {
   //map
   const w = deep / width * 1000.0
   //mappa il livello di  distanza deep con i valori del font variabile
-  const prova = floor(map(deep/4,50,200,0,300))
+  const prova = floor(map(deep/4,20,200,0,300))
   const c = x / width * 1000.0
 
   //Il CSS che va a modificare
@@ -102,8 +102,8 @@ function draw() {
 
   //per trasformare la posizione e inserire la lettera centrale 
   //heightLetter deve avere lo stesso valore di "font-size"
-  if (size.x/5 > 401){
-  lettera.style.transform = "translateY(-" + 400 *0.7 + "px)";
+  if (size.x/5 > 301){
+  lettera.style.transform = "translateY(-" + 300 *0.7 + "px)";
 } else {lettera.style.transform = "translateY(-" + heightLetter*0.7 + "px)";
 
 }
