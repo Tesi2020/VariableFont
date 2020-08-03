@@ -1,62 +1,67 @@
-let wSlider 
-// cSlider, iSlider;
-let fontRegular
-
-//seleziono la lettera dall'HTML
+//seleziono il div con l'id text
 const lettera = document.getElementById("text")
+//seleziono il  div per  lo slider
+let Resolution = document.getElementById("Resolution")
+let Tracking = document.getElementById("Tracking")
+let Leading = document.getElementById("Leading")
+//aggiorno il valore dello slider con addEventListener
+Resolution.addEventListener('input', sliderChangeResolution);
+Tracking.addEventListener('input', sliderChangeTracking);
+Leading.addEventListener('input', sliderChangeLeading);
 
-function preload() {
-  //fontRegular = loadFont('SFNSDisplayCondensed-Regular.otf');
-}
-
-function setup(){
-  createCanvas(windowWidth,windowHeight);
-
-  fill(255);
-  //textFont(fontRegular);
-  textSize(20);
-  noStroke();
-
-  // Slider(inizio, fine, iniziale)
-  wSlider = createSlider(0, 300, 299);
-  wSlider.position(30, height-100);
-  // cSlider = createSlider(75, 125, 0);
-  // cSlider.position(width/2-wSlider.width/2, height-100);
-  // iSlider = createSlider(0, 1, 0);
-  // iSlider.position(width-iSlider.width*2, height-100);
-}
+const slidecontainer = document.querySelector("#slidecontainer")
+const buttonDistance = document.querySelector("#buttonDistance")
+const buttonSliders = document.querySelector("#buttonSliders")
 
 
-function draw(){
-  //miusra dimensioni pagina
-  const width = window.innerWidth
-  const height = window.innerHeight
+let output = document.getElementById("demo");
+output.innerHTML = Resolution.value;
 
-  const w = wSlider.value();
-  // const c = cSlider.value();
-  // const i = iSlider.value();
+//dimensione font
+lettera.style["font-size"] = "300px";
 
-  // push();
-  // stroke(255);
-  // strokeWeight(0.5);
-  // line(30+wSlider.height/2, height-100+wSlider.height/2,  wSlider.x+wSlider.width, height-100 + wSlider.height/2);
-  // line(width/2-cSlider.width/2+cSlider.height/2, height-100+cSlider.height/2, cSlider.x + cSlider.width, height-100+cSlider.height/2);
-  // line(iSlider.x+iSlider.height/2, height-100 + iSlider.height/2, iSlider.x + iSlider.width, height-100 + iSlider.height/2);
-  // pop();
 
-  //text('SIZE', wSlider.x + wSlider.width + 50, wSlider.y + wSlider.height);
-  // text('width', cSlider.x + cSlider.width + 50, cSlider.y + cSlider.height);
-  // text('italic', iSlider.x + iSlider.width + 50, iSlider.y + iSlider.height);
-
-  //dimesnione font
-  lettera.style["font-size"] = "500px";
-
-  //css che va a modificare
-  lettera.style["font-variation-settings"] = " 'SIZE' " + w; //+ "," + " 'wdth' " + c + "," + " 'ital' " + i;
-}
+const width = window.innerWidth
+const height = window.innerHeight
 
 // -- EVENTI ----------------------------------
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight)
+}
+
+//funzione che riprende il valore dello slider
+function sliderChangeResolution() {
+  lettera.style["font-variation-settings"] = " 'SIZE' " + this.value;
+  console.log(this.value);
+}
+
+function sliderChangeTracking() {
+  lettera.style["letter-spacing"] = this.value +"em";
+  console.log(this.value);
+}
+
+function sliderChangeLeading() {
+  lettera.style["line-height"] = this.value +"%";
+  console.log(this.value);
+}
+
+Resolution.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+
+
+
+
+buttonDistance.addEventListener("click", hide)
+
+function hide() {
+  slidecontainer.style.display = "none";
+}
+
+buttonSliders.addEventListener("click", show)
+
+function show() {
+  slidecontainer.style.display = "block";
 }
