@@ -53,7 +53,7 @@ Resolution.oninput = function() {
 
 
 
-
+// -- BOTTONI PRINCIPALI ------------------------------------------------
 buttonDistance.addEventListener("click", hide)
 
 function hide() {
@@ -65,3 +65,24 @@ buttonSliders.addEventListener("click", show)
 function show() {
   slidecontainer.style.display = "block";
 }
+
+
+// -- BOTTONE ABOUT ------------------------------------------------
+    const buttonAbout = document.querySelector("#buttonAbout")
+    const buttonInfo = document.querySelector("#info")
+    const about = document.querySelector("#about")
+    const buttonClose = document.querySelector("#buttonClose")
+    buttonAbout.addEventListener("click", showAbout)
+    info.addEventListener("click", showAbout)
+    buttonClose.addEventListener("click", hideAbout)
+
+    function showAbout() {
+        about.classList.add("active")
+        buttonAbout.style.display = "none";
+    }
+
+    function hideAbout() {
+        about.classList.remove("active")
+        buttonAbout.style.display = "inline-block";
+    }
+
