@@ -25,10 +25,10 @@ function handleScrollEvent(event) {
 	console.log(currentTime,videoDuration, prova)
 	lettera.style["font-variation-settings"] = " 'SIZE' " + prova
 
-   if (document.body.scrollTop > 9073 || document.documentElement.scrollTop > 9073) {
+  console.log(document.documentElement.scrollTop,document.body.scrollTop)
+   if (document.body.scrollTop > 9064 || document.documentElement.scrollTop > 9064) {
     const url = "../Sketch_variable/abc/A_slider_DV/index.html"
     window.location = url
-
   } 
 }
 
