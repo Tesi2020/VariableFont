@@ -24,6 +24,12 @@ function handleScrollEvent(event) {
 	const prova = Math.floor(map_range(currentTime,0,videoDuration,0,300))
 	console.log(currentTime,videoDuration, prova)
 	lettera.style["font-variation-settings"] = " 'SIZE' " + prova
+
+   if (document.body.scrollTop > 9073 || document.documentElement.scrollTop > 9073) {
+    const url = "../Sketch_variable/abc/A_slider_DV/index.html"
+    window.location = url
+
+  } 
 }
 
 // Loaded Data handler, that is, the function that runs after the video is ready to play
@@ -32,6 +38,8 @@ function handleLoadedData(event) {
   videoDuration = $video.duration;
   // Do stuff when user scrolls
   window.addEventListener('scroll', handleScrollEvent);
+
+
 }
 
 // Do stuff when the video is ready to play
