@@ -7,7 +7,7 @@ let spacerHeight = $spacer.clientHeight;
 // the height of the viewport
 let viewportHeight = document.documentElement.getBoundingClientRect().height;
 
-lettera.style["font-size"] = 200 + "px";
+lettera.style["font-size"] = 100 + "px";
 
 // We can get the total scrollable height be subtracting the spacer element's height by the viewport height
 let scrollableHeight = spacerHeight - viewportHeight;
@@ -21,7 +21,7 @@ function handleScrollEvent(event) {
   // Here we sync the y position of the scrollbar to the progress of the video
   currentTime = window.scrollY * videoDuration / scrollableHeight;
   $video.currentTime = currentTime;
-	const prova = Math.floor(map_range(currentTime,0,videoDuration,0,300))
+	const prova = Math.floor(map_range(currentTime,0,videoDuration,300,0))
 	console.log(currentTime,videoDuration, prova)
 	lettera.style["font-variation-settings"] = " 'SIZE' " + prova
 
