@@ -1,0 +1,480 @@
+html {
+  box-sizing: border-box;
+  display: block;
+}
+
+*, *:before, *:after {
+  /*box-sizing: inherit;*/
+  box-sizing: border-box;
+}
+
+body {
+  background-color: none;
+  margin: 0;
+}
+
+div {
+  display: block;
+}
+
+@font-face {
+  font-family: 'E_motion';
+  src: url('E_motionGX.ttf') format('truetype-variations');
+  font-stretch: 75% 100%;
+  font-SAJO: -100 100;
+  font-SAJO: -100 100;
+  font-DITR: -100 100;
+  font-ANFE: -100 100;
+  font-ANSU: -100 100;
+}
+
+:root {
+  --text-SAJO: 0;
+  --text-DITR: 0;
+  --text-ANFE: 0;
+  --text-ANSU: 0;
+}
+
+.buttonVariable {
+  position: absolute;
+  bottom: 7.5rem;
+  right: 1rem;
+}
+
+.btn {
+  font-family: "E_motion", sans-serif;
+  border: 1px solid black;
+  outline: none;
+  padding: .35rem .35rem .45rem .35rem;
+  /*padding: .35rem .35rem .45rem .35rem;*/
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 1rem;
+  opacity: 1;
+  text-align: center;
+  text-decoration:none;
+  width: 5.8rem;
+  margin-top: 1rem;
+  display: block;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  font-family: "E_motion", sans-serif;
+  text-align: center;
+}
+
+.container-text {
+  font-family: "E_motion", sans-serif;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  grid-gap: 0px;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.container-specimen {
+  font-family: "E_motion", sans-serif;
+  /*text-align: center;*/
+  width: 100%;
+  display: grid;
+  /*grid-template-columns: 12fr;*/
+  grid-gap: 0px;
+  padding: 0rem 1rem 0rem 0rem;
+}
+
+.container-thanks {
+  font-family: "E_motion", sans-serif;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 0px;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.demo-text {
+  font-family: "E_motion", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  border: none;
+  outline: none;
+  line-height: 1.1em;
+  user-select: none;
+  width: 97vw;
+
+  /*font-size: "font-size";*/
+  font-size: 10rem;
+  font-SAJO: var(--text-SAJO);
+  font-ANFE: var(--text-ANFE);
+  font-DITR: var(--text-DITR);
+  font-ANSU: var(--text-ANSU);
+  font-variation-settings: "SAJO" var(--text-SAJO), "DITR" var(--text-DITR), "ANFE" var(--text-ANFE), "ANSU" var(--text-ANSU);
+}
+
+.About-text {
+  font-family: "E_motion", sans-serif;
+  font-variation-settings: "SAJO" 0, "DITR" 0, "ANFE" 0, "ANSU" 0;
+  padding: 0;
+  margin-top: 8rem;
+  margin-left: 1rem;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.Text-Neutral {
+  font-family: "E_motion", sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 0rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Text-Joy {
+  font-family: "E_motion", sans-serif;
+  font-variation-settings: "SAJO" 100, "DITR" 0, "ANFE" 0, "ANSU" 0;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Text-Sadness {
+  font-family: "E_motion", sans-serif;
+  font-variation-settings: "SAJO" -100, "DITR" 0, "ANFE" 0, "ANSU" 0;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Text-Trust {
+  font-family: "E_motion", sans-serif;
+  font-variation-settings: "SAJO" 0, "DITR" 100, "ANFE" 0, "ANSU" 0;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Text-Disgust {
+  font-family: "E_motion", sans-serif;
+  font-variation-settings: "SAJO" 0, "DITR" -100, "ANFE" 0, "ANSU" 0;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Text-Fear {
+  font-family: "E_motion", sans-serif;
+  font-variation-settings: "SAJO" 0, "DITR" 0, "ANFE" 100, "ANSU" 0;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Text-Anger {
+  font-family: "E_motion", sans-serif;
+  font-variation-settings: "SAJO" 0, "DITR" 0, "ANFE" -100, "ANSU" 0;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Text-Anticipation {
+  font-family: "E_motion", sans-serif;
+  font-variation-settings: "SAJO" 0, "DITR" 0, "ANFE" 0, "ANSU" -100;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Text-Surprise {
+  font-family: "E_motion", sans-serif;
+  font-variation-settings: "SAJO" 0, "DITR" 0, "ANFE" 0, "ANSU" 100;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Style {
+  font-family: "E_motion", sans-serif;
+  margin-top: 0;
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.Style-Neutral {
+  font-family: "E_motion", sans-serif;
+  margin-top: 0;
+  padding-top: 6rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.Thanks-text {
+  font-family: "E_motion", sans-serif;
+  /*padding-top: 2rem;*/
+  margin-left: 1rem;
+  margin-top: 2rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.controls {
+}
+
+.output {
+  font-style: normal;
+  font-variation-settings: "FEAN" var(--text-FEAN);
+  font-weight: 400;
+}
+
+.slider-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  grid-gap: 1px;
+  padding: 0rem 0rem 0rem 1.5rem;
+} 
+
+.slider-controls {
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.slider-label-right {
+  font-size: 1rem;
+  margin-right: 2rem;
+  color: red;
+  text-align: right;
+  font-style: normal;
+  font-variation-settings: "FEAN" var(--text-FEAN);
+  font-weight: 650;
+}
+
+.slider-label-left {
+  font-size: 1rem;
+  text-align: left;
+  font-style: normal;
+  font-variation-settings: "FEAN" var(--text-FEAN);
+  font-weight: 650;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 1px;
+  background: black;
+  opacity: 1;
+  border-radius: .25rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+}
+
+.slider::-moz-range-thumb:active {
+  cursor: -moz-grabbing;
+}
+
+.topnav {
+  font-family: "E_motion", sans-serif;
+  margin-left: 1rem;
+  margin-top: 0;
+  background-color: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 1;
+  padding: 1rem .25rem .35rem .25rem;
+  text-align: center;
+  outline: none;
+  color: black;
+  text-decoration:none;
+}
+
+.attached {
+  font-family: "E_motion", sans-serif;
+  position:absolute;
+  margin-left: 1rem;
+  margin-top: 3.5rem;
+  background-color: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 1;
+  padding: .25rem .25rem .35rem .25rem;
+  text-align: center;
+  outline: none;
+  color: black;
+  text-decoration:none;
+}
+
+.language {
+  font-family: "E_motion", sans-serif;
+  position:absolute;
+  margin-left: 1rem;
+  margin-top: 3.5rem;
+  background-color: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 1;
+  padding: .25rem .25rem .35rem .25rem;
+  text-align: center;
+  outline: none;
+  color: black;
+  text-decoration:none;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  font-family: "E_motion", sans-serif;
+  background-color: none;
+  border: 1px solid black;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 1;
+  padding: .35rem .35rem .45rem .35rem;
+  text-align: center;
+  outline: none;
+  color: black;
+  text-decoration:none;
+  width: 5.8rem;
+}
+
+.attached a {
+  float: left;
+  color: black;
+  font-family: "E_motion", sans-serif;
+  background-color: none;
+  border: 1px solid black;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 1;
+  padding: .35rem .35rem .45rem .35rem;
+  text-align: center;
+  outline: none;
+  color: black;
+  text-decoration:none;
+  width: 5.8rem;
+}
+
+.language a {
+  float: left;
+  color: black;
+  font-family: "E_motion", sans-serif;
+  background-color: none;
+  border: 1px solid black;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 1;
+  padding: .35rem .35rem .45rem .35rem;
+  text-align: center;
+  outline: none;
+  color: black;
+  text-decoration:none;
+  width: 5.8rem;
+}
+
+.attached a:hover {
+}
+
+.topnav a:hover {
+}
+
+.language a:hover {
+}
+
+.attached a.active {
+  background-color: black;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+.language a.active {
+  background-color: black;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.attached-right {
+  float: right;
+}
+
+.language-right {
+  float: right;
+}
+
+.textarea {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
