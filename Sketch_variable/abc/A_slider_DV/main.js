@@ -18,7 +18,7 @@ let output = document.getElementById("demo");
 output.innerHTML = Resolution.value;
 
 //dimensione font
-lettera.style["font-size"] = "300px";
+//lettera.style["font-size"] = "300px";
 
 
 const width = window.innerWidth

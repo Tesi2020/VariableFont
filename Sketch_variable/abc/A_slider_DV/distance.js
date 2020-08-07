@@ -18,7 +18,7 @@ bDistance.addEventListener("input", distance)
 bSliders.addEventListener("click", sliders)
 
 function setup() {
-  createCanvas(windowWidth,windowHeight);
+  //createCanvas(windowWidth,windowHeight);
   video = createCapture(VIDEO);
   video.hide();
  

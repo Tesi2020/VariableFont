@@ -12,246 +12,13 @@
 	<meta name="msapplication-navbutton-color" 			content="black">
 	<meta name="apple-mobile-web-app-status-bar-style" 	content="black">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet"       href="../../css/style.css">
-
-	<style type="text/css">
-		body{
-			background-color: white;
-			color: black;	
-			padding:0;
-			margin:0;
-			position: relative;
-		}
-
-		@font-face {
-			font-family: ‘Font’;
-			src: url('DVGX.ttf') format('truetype-variations');			
-			color: black;
-		}
-
-		/*
-		canvas{
-			display: none;
-		}*/
-		
-		#text {
-			position: absolute;
-			/*left: -1000px;
-			top: -500px;
-			right: 0;
-			bottom: 0; */
-			width: 100vw;
-			height:80vh;
-
-			font-family: ‘Font’;
-			text-align: center;
-			padding: 10% 0;
-		
-			color: black;
-			margin: 10;
-			
-			font-variation-settings: 'SIZE' 300;
-			/*letter-spacing: -1px;*/
-			font-kerning: normal;
-			z-index: -1;
-		}
-
-		.slidecontainer {
-		 	width: 102vw;
-		 	background-color: white;
-		  	z-index: 1;
-		  	border: 1px solid #C0C0C0;
-		  	padding: 0;
-		  	margin:0;
-		  	margin-left: -18px;
-		  	margin-top: -2px;
-		  	padding-top: 10px;
-
-
-		}
-
-		.slider {
-		  -webkit-appearance: none;
-		  width: 80%;
-		  height: 1px;
-		  border-radius: 2px;
-		  background: #C0C0C0;
-		  outline: none;
-		  opacity: 0.7;
-		  -webkit-transition: .2s;
-		  transition: opacity .2s;
-		}
-
-		.slider:hover {
-		  opacity: 1;
-		}
-
-		.slider::-webkit-slider-thumb {
-		  -webkit-appearance: none;
-		  appearance: none;
-		  width: 15px;
-		  height: 15px;
-		  border-radius: 50%;
-		  border: 1px solid #C0C0C0;
-		  background: white;
-		  cursor: pointer;
-		}
-
-		.slider::-moz-range-thumb {
-		  width: 25px;
-		  height: 25px;
-		  border-radius: 50%;
-		  background: #4CAF50;
-		  cursor: pointer;
-		}
-
-		div.blue{
-		color: white;
-		background-color: rgb(0,0,255);
-
-		}
-
-		div.black{
-		color: white;
-		background-color: rgb(0,0,0);
-	
-		}
-
-		p.slidertext{
-			font-family: ‘Font’;
-			padding-top: 10px;
-			padding-left: 20px;
-			font-variation-settings: 'SIZE' 1;
-			font-size: 10px;
-
-
-		}
-
-		.btn-group{
-			left:-2px;
-			top:-1px;
-		}
-
-		.btn-group .button {
-		  background-color: white; /* Green */
-		  border: 1px solid #C0C0C0;
-		  color: black;
-		  padding: 10px 10px 10px 20px;
-		  text-align: left;
-		  text-decoration: none;
-		  display: inline-block;
-		  font-family: ‘Font’;
-		  font-variation-settings: 'SIZE' 300;
-		  font-size: 14px;
-		  cursor: pointer;
-		  float: left;
-		  width: 51vw;
-		}
-
-		.buttonSliders{width: 100%;}
-
-		.buttonDistance{width: 100%;}
-
-		.btn-group .button:not(:last-child) {
-		  border-right: none; /* Prevent double borders */
-		}
-
-		.col-sm{
-
-			padding: 0;
-		}
-
-		#info {
-        order: 0;
-        width: 100vw;
-        height: 3vh;
-        color: black;
-        /*font-size: 1.618em;*/
-        padding-left: 20px;
-        padding-top: 15px;
-    	}
-
-    	#about {
-        position: absolute;
-        display: none;
-        z-index: 4;
-        width: 100vw;
-        height: 100vh;
-        max-width: 100%;
-        background-color: white;
-        flex-direction: row;
-        flex-wrap: wrap;
-        /*font-size: 1.618em;*/
-        padding-top: 15px;
-        padding-left: 20px;
-        line-height: 1.25em;
-        justify-content: flex-start;
-    }
-
-		#buttonAbout {
-        height: 21px;
-        width: 21px;
-        max-width: 21px;
-        cursor: pointer;
-        margin: 0px 0px 0px 12px;
-        background-color: white;
-        border-radius: 50%;
-        border: 1px solid #C0C0C0;
-        text-align: center;
-        display: inline-block;
-        color: black;
-        /*font-size: 0.618em;*/
-        line-height: 1.1em;
-    	}
-
-    	#buttonClose {
-        z-index: 3;
-        width: 100vw;
-        height: 12vh;
-        bottom: 55px;
-        right: 50px;
-        font-size: 1em;
-        text-decoration: underline;
-        cursor: pointer;
-    	}
-
-    	#buttonX {
-        height: 21px;
-        width: 21px;
-        max-width: 21px;
-        cursor: pointer;
-        margin: 0px 0px 0px 12px;
-        background-color: white;
-        border-radius: 50%;
-        border: 1px solid #C0C0C0;
-        text-align: center;
-        display: inline-block;
-        color: black;
-        /*font-size: 0.618em;*/
-        line-height: 1.1em;
-    	}
-
-    	#about .title {
-        width: 50%;
-        order: 0;
-        margin-right: 25px;
-        height: 88vh;
-    	}
-
-    	.active {
-        display: flex !important;
-    		}
-
-    	p .title{
-    		z-index: 4;
-    	}
-
-	</style>
+	<!-- <link rel="stylesheet"       href="../../css/style.css"> -->
+	<link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body class="disable-select disable-scroll">
-	<div class="container-fluid">
+	<div class="container-fluid" id="menu">
 
 			
 			<div class="row">
@@ -297,7 +64,12 @@
 
 	<div id="elements">
 	<div id="text">
-		<p contenteditable="true" class="text">optotype</p>
+		<p contenteditable="true" class="text1">optotype</p>
+		<p contenteditable="true" class="text2">optotype</p>
+		<p contenteditable="true" class="text3">optotype</p>
+		<p contenteditable="true" class="text4">optotype</p>
+		<p contenteditable="true" class="text5">optotype</p>
+		<p contenteditable="true" class="text6">optotype</p>
 	</div>
 	<p>Value: <span id="demo"></span></p>
 	</div>
