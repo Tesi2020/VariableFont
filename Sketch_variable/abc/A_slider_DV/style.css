@@ -23,7 +23,7 @@
             top: -500px;
             right: 0;
             bottom: 0; */
-            width: 100vw;
+            width: 80vw;
             height:80vh;
 
             font-family: ‘Font’;
@@ -154,14 +154,14 @@
         height: 3vh;
         color: black;
         /*font-size: 1.618em;*/
-        padding-left: 20px;
-        padding-top: 15px;
+        bottom:5vh;
+        left:95vw;
+        position: fixed;
         }
 
         #about {
-        position: absolute;
+        position: fixed;
         display: none;
-        z-index: 4;
         width: 100vw;
         height: 100vh;
         max-width: 100%;
@@ -169,16 +169,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         /*font-size: 1.618em;*/
-        padding-top: 15px;
-        padding-left: 20px;
+        padding: 0;
+        margin: 0;
         line-height: 1.25em;
         justify-content: flex-start;
     }
 
         #buttonAbout {
-        height: 21px;
-        width: 21px;
-        max-width: 21px;
+        height: 30px;
+        width: 30px;
+        max-width: 30px;
         cursor: pointer;
         margin: 0px 0px 0px 12px;
         background-color: white;
@@ -188,24 +188,29 @@
         display: inline-block;
         color: black;
         /*font-size: 0.618em;*/
-        line-height: 1.1em;
+        line-height: 1.4em;
+        font-family: ‘Font’;
+        font-variation-settings: 'SIZE' 1;
+        font-size: 1.2em;
         }
 
         #buttonClose {
-        z-index: 3;
+        order: 0;
         width: 100vw;
-        height: 12vh;
-        bottom: 55px;
-        right: 50px;
-        font-size: 1em;
-        text-decoration: underline;
-        cursor: pointer;
+        height: 3vh;
+        color: black;
+        /*font-size: 1.618em;*/
+        bottom:5vh;
+        left:95vw;
+        position: fixed;
         }
 
         #buttonX {
-        height: 21px;
-        width: 21px;
-        max-width: 21px;
+        bottom:5vh;
+        left:95vw;
+        height: 30px;
+        width: 30px;
+        max-width: 30px;
         cursor: pointer;
         margin: 0px 0px 0px 12px;
         background-color: white;
@@ -215,13 +220,16 @@
         display: inline-block;
         color: black;
         /*font-size: 0.618em;*/
-        line-height: 1.1em;
+        line-height: 1.3em;
+        font-family: ‘Font’;
+        font-variation-settings: 'SIZE' 1;
+        font-size: 1.3em;
         }
 
-        #about .title {
+        #about .aboutText {
         width: 50%;
         order: 0;
-        margin-right: 25px;
+        margin-left: 25px;
         height: 88vh;
         }
 
@@ -241,32 +249,32 @@
 
         }
 
-        p .text #text1{
+        p .text1{
 
             font-size: 300px;
         }
 
-        p .text #text2{
+        p .text2{
 
             font-size: 200px;
         }
 
-        p .text #text3{
+        p .text3{
 
             font-size: 150px;
         }
 
-        p .text #text4{
+        p .text4{
 
             font-size: 100px;
         }
 
-        p .text #text5{
+        p .text5{
 
             font-size: 50px;
         }
 
-        p .text #text6{
+        p .text6{
 
             font-size: 20px;
         }
