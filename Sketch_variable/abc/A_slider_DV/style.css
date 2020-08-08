@@ -228,15 +228,18 @@
         }
 
         #about .aboutText {
-        width: 50%;
+        width: 60%;
         order: 0;
         padding-top: 25px;
         margin-left: 25px;
         height: 100vh;
-        line-height: 1.3em;
+        line-height: 1.5em;
         font-family: ‘Font’;
         font-variation-settings: 'SIZE' 300;
-        font-size: 1.3em;
+        font-size: 1.7em;
+        }
+        #about .pText {
+        margin-bottom: 0;
         }
 
         #elements{
