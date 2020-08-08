@@ -171,6 +171,7 @@
         /*font-size: 1.618em;*/
         padding: 0;
         margin: 0;
+        top:0;
         line-height: 1.25em;
         justify-content: flex-start;
     }
@@ -229,8 +230,13 @@
         #about .aboutText {
         width: 50%;
         order: 0;
+        padding-top: 25px;
         margin-left: 25px;
-        height: 88vh;
+        height: 100vh;
+        line-height: 1.3em;
+        font-family: ‘Font’;
+        font-variation-settings: 'SIZE' 300;
+        font-size: 1.3em;
         }
 
         #elements{
