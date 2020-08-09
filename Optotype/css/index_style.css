@@ -1,0 +1,289 @@
+        body{
+            background-color: white;
+            color: black;   
+            padding:0;
+            margin:0;
+            position: relative;
+        }
+
+        @font-face {
+            font-family: ‘Font’;
+            src: url('DVGX.ttf') format('truetype-variations');         
+            color: black;
+        }
+
+        /*
+        canvas{
+            display: none;
+        }*/
+        
+        #text {
+            position: absolute;
+            /*left: -1000px;
+            top: -500px;
+            right: 0;
+            bottom: 0; */
+            width: 80vw;
+            height:80vh;
+
+            font-family: ‘Font’;
+            text-align: center;
+            padding: 10% 0;
+        
+            color: black;
+            margin: 10;
+            
+            font-variation-settings: 'SIZE' 300;
+            /*letter-spacing: -1px;*/
+            font-kerning: normal;
+            z-index: -1;
+        }
+
+        .slidecontainer {
+            width: 102vw;
+            background-color: white;
+            z-index: 1;
+            border: 1px solid #C0C0C0;
+            padding: 0;
+            margin:0;
+            margin-left: -18px;
+            margin-top: -2px;
+            padding-top: 10px;
+
+
+        }
+
+        .slider {
+          -webkit-appearance: none;
+          width: 80%;
+          height: 1px;
+          border-radius: 2px;
+          background: #C0C0C0;
+          outline: none;
+          opacity: 0.7;
+          -webkit-transition: .2s;
+          transition: opacity .2s;
+        }
+
+        .slider:hover {
+          opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          border: 1px solid #C0C0C0;
+          background: white;
+          cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: #4CAF50;
+          cursor: pointer;
+        }
+
+        div.blue{
+        color: white;
+        background-color: rgb(0,0,255);
+
+        }
+
+        div.black{
+        color: white;
+        background-color: rgb(0,0,0);
+    
+        }
+
+        p.slidertext{
+            font-family: ‘Font’;
+            padding-top: 10px;
+            padding-left: 20px;
+            font-variation-settings: 'SIZE' 1;
+            font-size: 10px;
+
+
+        }
+
+        .btn-group{
+            left:-2px;
+            top:-1px;
+        }
+
+        .btn-group .button {
+          background-color: white; /* Green */
+          border: 1px solid #C0C0C0;
+          color: black;
+          padding: 10px 10px 10px 20px;
+          text-align: left;
+          text-decoration: none;
+          display: inline-block;
+          font-family: ‘Font’;
+          font-variation-settings: 'SIZE' 300;
+          font-size: 14px;
+          cursor: pointer;
+          float: left;
+          width: 51vw;
+        }
+
+        .buttonSliders{width: 100%;}
+
+        .buttonDistance{width: 100%;}
+
+        .btn-group .button:not(:last-child) {
+          border-right: none; /* Prevent double borders */
+        }
+
+        .col-sm{
+
+            padding: 0;
+        }
+
+        #menu{
+            position: fixed;
+        }
+
+        #info {
+        order: 0;
+        width: 100vw;
+        height: 3vh;
+        color: black;
+        /*font-size: 1.618em;*/
+        bottom:5vh;
+        left:95vw;
+        position: fixed;
+        }
+
+        #about {
+        position: fixed;
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        background-color: white;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /*font-size: 1.618em;*/
+        padding: 0;
+        margin: 0;
+        top:0;
+        line-height: 1.25em;
+        justify-content: flex-start;
+    }
+
+        #buttonAbout {
+        height: 30px;
+        width: 30px;
+        max-width: 30px;
+        cursor: pointer;
+        margin: 0px 0px 0px 12px;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid #C0C0C0;
+        text-align: center;
+        display: inline-block;
+        color: black;
+        /*font-size: 0.618em;*/
+        line-height: 1.4em;
+        font-family: ‘Font’;
+        font-variation-settings: 'SIZE' 1;
+        font-size: 1.2em;
+        }
+
+        #buttonClose {
+        order: 0;
+        width: 100vw;
+        height: 3vh;
+        color: black;
+        /*font-size: 1.618em;*/
+        bottom:5vh;
+        left:95vw;
+        position: fixed;
+        }
+
+        #buttonX {
+        bottom:5vh;
+        left:95vw;
+        height: 30px;
+        width: 30px;
+        max-width: 30px;
+        cursor: pointer;
+        margin: 0px 0px 0px 12px;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid #C0C0C0;
+        text-align: center;
+        display: inline-block;
+        color: black;
+        /*font-size: 0.618em;*/
+        line-height: 1.3em;
+        font-family: ‘Font’;
+        font-variation-settings: 'SIZE' 1;
+        font-size: 1.3em;
+        }
+
+        #about .aboutText {
+        width: 60%;
+        order: 0;
+        padding-top: 25px;
+        margin-left: 25px;
+        height: 100vh;
+        line-height: 1.5em;
+        font-family: ‘Font’;
+        font-variation-settings: 'SIZE' 300;
+        font-size: 1.7em;
+        }
+        #about .pText {
+        margin-bottom: 0;
+        }
+
+        #elements{
+            z-index: 5;
+        }
+        .active {
+        display: flex !important;
+            }
+
+        p .title{
+            z-index: 4;
+        }
+
+        .defaultCanvas0 {
+            z-index: -1;
+
+        }
+
+        p .text1{
+
+            font-size: 300px;
+        }
+
+        p .text2{
+
+            font-size: 200px;
+        }
+
+        p .text3{
+
+            font-size: 150px;
+        }
+
+        p .text4{
+
+            font-size: 100px;
+        }
+
+        p .text5{
+
+            font-size: 50px;
+        }
+
+        p .text6{
+
+            font-size: 20px;
+        }
