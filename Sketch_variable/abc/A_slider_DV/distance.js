@@ -13,9 +13,9 @@ const letter = document.getElementById("text")
 const bDistance = document.querySelector("#buttonDistance")
 const bSliders = document.querySelector("#buttonSliders")
 
-bDistance.addEventListener("click", distance)
-bDistance.addEventListener("input", distance)
-bSliders.addEventListener("click", sliders)
+// bDistance.addEventListener("click", distance)
+// bDistance.addEventListener("input", distance)
+// bSliders.addEventListener("click", sliders)
 
 function setup() {
   //createCanvas(windowWidth,windowHeight);
@@ -61,18 +61,26 @@ function draw(){
   bDistance.addEventListener("click", ()=> {
     if(bDistance.dataset.over == "false"){
         bDistance.dataset.over = "true"
-        distance()   
     }else{
-        bDistance.dataset.over = "false"
-        sliders()
+        bDistance.dataset.over = "true"
       }
   })
     bSliders.addEventListener("click", ()=> {
     if(bDistance.dataset.over == "true"){
         bDistance.dataset.over = "false"
-        sliders()
+      }else{
+        bDistance.dataset.over = "false"
       }
   })
+
+     if(bDistance.dataset.over == "false"){
+      sliders()
+        
+    }else if(bDistance.dataset.over == "true"){
+      distance()
+    }
+
+
 
 }
 
