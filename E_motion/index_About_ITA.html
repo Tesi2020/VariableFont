@@ -13,10 +13,19 @@
   <meta name="apple-mobile-web-app-status-bar-style"  content="black">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
+
+<main class="buttonVariable">  
+  <div id="myDIV">
+    <button class="btn btnVoice" id="btnVoice">Voice</button>
+    <button class="btn btnMouse" id="btnMouse">Mouse</button>
+    <button class="btn active" id="btnSlider">Slider</button>
+  </div>
+</main>
+
   <div class="topnav">
     <a href="index.html">[E·motion]</a>
     <a href="index_About_ITA.html" class="active">About</a>
@@ -29,37 +38,76 @@
   <div class="language">
     <a href="index_About_EN.html">English</a>
     <a href="index_About_ITA.html" class="active">Italiano</a>
+    <div class="topnav-right">
+      <button class="button button-invert" id="button"></button>
+    </div>
   </div>
 
   <!-- text About -->
   <main class="container-text">
     <div>
-      <p class="About-text">
-        [E·motion] è un carattere tipografico ideato per il testo dei sottotitoli presenti nei film e nei video cinematografici.</br>
-        [E·motion] è stato concepito al fine di tradurre non solamente i dialoghi pronunciati dai narratori, ma ricostruisce in modo tipografico un ambiente emotivo e l’aspetto sonoro.</br>
+      <p class="About-text" id="text-about">
+        [E·motion] è un carattere tipografico ideato per il testo dei sottotitoli presenti nei film e nei video cinematografici.
+        [E·motion] è stato concepito al fine di tradurre non solamente i dialoghi pronunciati dai narratori, ma ricostruisce in modo tipografico un ambiente emotivo e l’aspetto sonoro.
         Il carattere presenta otto varianti emotive ed un peso neutrale. La scelta di una suddivisione in nove pesi differenti deriva dalle ricerche sulle emozioni realizzate da Robert Plutchik e Paul Ekman, i quali hanno definito le otto emozioni primarie. Secondo i rispettivi studi queste sensazioni sono percettibili sull’espressione facciale.
       </p>
-    </div>
-  </main>
-  <main class="container-thanks">
-    <div>
-      <p class="Thanks-text">
+<!--       <p class="Thanks-text" id="text-about">
         GRAFICA & TYPE DESIGN</br>
         Chiara Crivelli</br>
         Bachelor in Comunicazione Visiva</br>
         2019–2020
       </p>
-      <p class="Thanks-text">
+      <p class="Thanks-text" id="text-about">
         GRAZIE MILLE</br>
         Sylvain Esposito</br>
         La mia famiglia</br>
         I miei amici
-      </p>
+      </p> -->
+    </div>
+
+    <div class="slidercontainer">
+      <input type="range" min="-100" max="100" value="0" class="slider" id="SAJO" name="SAJO" data-index="0">
+      <input type="range" min="-100" max="100" value="0" class="slider" id="DITR" name="DITR" data-index="1">
+      <input type="range" min="-100" max="100" value="0" class="slider" id="ANFE" name="ANFE" data-index="2">
+      <input type="range" min="-100" max="100" value="0" class="slider" id="ANSU" name="ANSU" data-index="3">
+
+      <div class="slider-controls">
+        <label for="text-SAJO" class="slider-label-left">Sadness/ Joy</label>
+        <label for="text-SAJO" class="slider-label-right">
+         [<span class="outputSAJO" id="demoSAJO">0</span>]   
+        </label>
+      </div>
+
+      <div class="slider-controls">
+        <label for="text-DITR" class="slider-label-left">Disgust/ Trust</label>
+        <label for="text-DITR" class="slider-label-right">
+          [<span class="outputDITR" id="demoDITR">0</span>] 
+        </label>
+      </div>
+
+      <div class="slider-controls">
+        <label for="text-ANFE" class="slider-label-left">Anger/ Fear</label>
+        <label for="text-ANFE" class="slider-label-right">
+          [<span class="outputANFE" id="demoANFE">0</span>] 
+        </label>
+      </div>
+
+      <div class="slider-controls">
+        <label for="text-ANSU" class="slider-label-left">Anticipation/ Surprise</label>
+        <label for="text-ANSU" class="slider-label-right">
+          [<span class="outputANSU" id="demoANSU">0</span>] 
+        </label>
+      </div>
     </div>
   </main>
-  
-  <!-- partial -->
-  <script  src="./script.js"></script>
-
 </body>
+
+<script src="assets/js/main_about.js"></script>
+<script src="assets/js/main_slider_about.js"></script>
+<script src="assets/js/main_inverti.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+
 </html>
