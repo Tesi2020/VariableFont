@@ -75,12 +75,11 @@ function draw(){
 
      if(bDistance.dataset.over == "false"){
       sliders()
+      letter.style["font-size"] = "150px";
         
     }else if(bDistance.dataset.over == "true"){
       distance()
     }
-
-
 
 }
 
