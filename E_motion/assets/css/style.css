@@ -84,7 +84,7 @@ div {
 }
 
 /* Style the active class, and buttons on mouse-over */
-.active, .btn:hover {
+.active, .btn:hover, .btn:active {
   background-color: black;
   color: white;
 }
