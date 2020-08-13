@@ -28,9 +28,6 @@ const buttonDistance = document.querySelector("#buttonDistance")
 const buttonSliders = document.querySelector("#buttonSliders")
 
 
-let output = document.getElementById("demo");
-output.innerHTML = Resolution.value;
-
 //dimensione font
 //lettera.style["font-size"] = "300px";
 
@@ -50,7 +47,7 @@ function sliderChangeResolution(evt) {
   const v = evt.target.value
 
   lettera.querySelectorAll('.selected').forEach(e => {
-    e.previousSibling.innerHTML = v + "<br>pt"
+    e.previousSibling.innerHTML = v + "<br>ppi"
     e.style["font-variation-settings"] = " 'SIZE' " + v
   })
 
@@ -71,16 +68,12 @@ function sliderChangeLeading(evt) {
 
   const v = evt.target.value
 
+  console.log(v)
+
   lettera.querySelectorAll('.selected').forEach(e => {
     e.style["line-height"] = v +"%"
   })
 }
-
-Resolution.oninput = function() {
-  output.innerHTML = this.value;
-}
-
-
 
 
 // -- BOTTONI PRINCIPALI ------------------------------------------------

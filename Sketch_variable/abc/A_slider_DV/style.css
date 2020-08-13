@@ -30,7 +30,7 @@
             z-index: -1;
             color: black;
             padding: 10% 0;
-            
+
         }
         
         #text p{
@@ -38,6 +38,13 @@
             font-variation-settings: 'SIZE' 300;
             /*letter-spacing: -1px;*/
             font-kerning: normal;
+
+        }
+
+        #text span.val {
+            font-family: ‘Font’;
+            font-variation-settings: 'SIZE' 1;
+            font-size: 1em;
 
         }
 
