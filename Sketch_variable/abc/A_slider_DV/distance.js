@@ -99,6 +99,9 @@ function distance() {
   lettera.querySelectorAll('p').forEach(e => {
     e.style["display"] = "none"
   })
+  lettera.querySelectorAll('span').forEach(e => {
+    e.style["display"] = "none"
+  })
 
 
   lettera.querySelectorAll('.selected').forEach(e => {
@@ -119,6 +122,10 @@ function sliders() {
 
   bDistance.classList.remove("active")
     lettera.querySelectorAll('p').forEach(e => {
+    e.style["display"] = "block"
+  })
+
+  lettera.querySelectorAll('span').forEach(e => {
     e.style["display"] = "block"
   })
   

@@ -44,7 +44,7 @@
         #text span.val {
             font-family: ‘Font’;
             font-variation-settings: 'SIZE' 1;
-            font-size: 1em;
+            font-size: 10px !important;
 
         }
 
