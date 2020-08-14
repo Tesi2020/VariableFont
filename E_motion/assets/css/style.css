@@ -29,6 +29,16 @@ div {
   font-weight: 100 900;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: "E_motion", sans-serif;
+  font-size: 0.95rem;
+}
+
 :root {
   --text-SAJO: 0;
   --text-DITR: 0;
@@ -86,19 +96,24 @@ div {
   padding-top: 1rem;
 }
 
-/*.container-text {
+.Text {
   font-family: "E_motion", sans-serif;
-  display: grid;
-  grid-template-columns: 9fr 3fr;
+  margin: 1rem 1rem 4rem 1rem;
+
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
   background-color: white;
   color: black;
-}*/
+
+  /*border-top: 0.2px solid rgb(0,0,0,0.5);*/
+  /*border-radius: 20px;*/
+  /*outline: none;*/
+}
 
 .demo-text {
   font-family: "E_motion", sans-serif;
 
-  /*font-size: "font-size";*/
-  font-size: 10rem;
   font-SAJO: var(--text-SAJO);
   font-ANFE: var(--text-ANFE);
   font-DITR: var(--text-DITR);
@@ -137,27 +152,6 @@ div {
   color: black;
 
   z-index:-1;
-}
-
-.Text {
-  font-family: "E_motion", sans-serif;
-  margin-top: 0rem;
-  margin-left: 1rem;
-  padding-left: 1.5rem;
-  margin-right: 1rem;;
-  padding-right: 1.5rem;;
-  padding-bottom: 1.5rem;;
-  text-align: center;
-  font-size: 2rem;
-  background-color: white;
-  color: black;
-  text-align: center;
-  border: 0.2px solid rgb(0,0,0,0.5);
-  border-radius: 20px;
-  padding-top: 1rem;
-
-  /*border: none;*/
-  outline: none;
 }
 
 .Style {
@@ -258,6 +252,7 @@ div {
   appearance: none;
   width: 10px;
   height: 10px;
+  /*border: 0.2px solid rgb(0,0,0,0.5);*/
   border-radius: 100%;
   background-color: rgba(0,0,0,1);
 }
@@ -413,12 +408,6 @@ div {
 }
 
 .attached-right {
-  float: right;
-  background-color: white;
-  color: black;
-}
-
-.language-right {
   float: right;
   background-color: white;
   color: black;
