@@ -1,6 +1,20 @@
 //seleziono il div con l'id text
 const lettera = document.getElementById("text")
-//seleziono il  div per  lo slider
+
+const p = lettera.querySelectorAll('p')
+p.forEach(e => {
+  e.addEventListener('click', f => {
+
+    p.forEach(el => {
+      if (el != f.target) el.classList.remove('selected')
+    })
+    f.target.classList.toggle('selected')
+  })
+})
+
+
+
+//seleziono il  div per lo slider
 let Resolution = document.getElementById("Resolution")
 let Tracking = document.getElementById("Tracking")
 let Leading = document.getElementById("Leading")
@@ -13,9 +27,6 @@ const slidecontainer = document.querySelector("#slidecontainer")
 const buttonDistance = document.querySelector("#buttonDistance")
 const buttonSliders = document.querySelector("#buttonSliders")
 
-
-let output = document.getElementById("demo");
-output.innerHTML = Resolution.value;
 
 //dimensione font
 //lettera.style["font-size"] = "300px";
@@ -31,26 +42,38 @@ function windowResized(){
 }
 
 //funzione che riprende il valore dello slider
-function sliderChangeResolution() {
-  lettera.style["font-variation-settings"] = " 'SIZE' " + this.value;
-  console.log(this.value);
+function sliderChangeResolution(evt) {
+
+  const v = evt.target.value
+
+  lettera.querySelectorAll('.selected').forEach(e => {
+    e.previousSibling.innerHTML = v + "<br>ppi"
+    e.style["font-variation-settings"] = " 'SIZE' " + v
+  })
+
+  // lettera.style["font-variation-settings"] = " 'SIZE' " + this.value;
 }
 
-function sliderChangeTracking() {
-  lettera.style["letter-spacing"] = this.value +"em";
-  console.log(this.value);
+function sliderChangeTracking(evt) {
+
+   const v = evt.target.value
+
+  lettera.querySelectorAll('.selected').forEach(e => {
+    e.style["letter-spacing"] = v +"em"
+  })
+ 
 }
 
-function sliderChangeLeading() {
-  lettera.style["line-height"] = this.value +"%";
-  console.log(this.value);
+function sliderChangeLeading(evt) {
+
+  const v = evt.target.value
+
+  console.log(v)
+
+  lettera.querySelectorAll('.selected').forEach(e => {
+    e.style["line-height"] = v +"%"
+  })
 }
-
-Resolution.oninput = function() {
-  output.innerHTML = this.value;
-}
-
-
 
 
 // -- BOTTONI PRINCIPALI ------------------------------------------------
