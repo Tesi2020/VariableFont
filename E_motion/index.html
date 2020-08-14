@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Video</title>
+  <meta name="description"              content="Video">
+  <meta name="author"                             content="Chiara Crivelli">
+  <meta name="viewport"                 content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable"         content="yes">
+  <meta name="apple-mobile-web-app-capable"       content="yes">
+  <meta name="theme-color"              content="black">
+  <meta name="msapplication-navbutton-color"      content="black">
+  <meta name="apple-mobile-web-app-status-bar-style"  content="black">
+  <!-- <link rel="stylesheet" href="assets/css/style1.css"> -->
+
+</head>
+<body>
+
+    <video width="800" controls autoplay="true">
+        <source src="Khan.mp4" type="video/mp4">
+    </video>
+
+    <div id="out"></div>
+
+    <script type="text/javascript">
+
+        fetch('st.json').then(r => {
+            return r.json()
+        }).then(json => {
+            const out   = document.querySelector('#out')
+            const video = document.querySelector('video')
+            const sottoTitoli = json
+
+            setInterval(function(){
+                const t = video.currentTime * 1000
+                out.innerHTML = find(sottoTitoli, t)
+            }, 20);
+        })
+
+        function find(vt, t){
+            for (const e of vt) {
+                if (t >= e.start && t <= e.end) {
+                    return e.part
+                }
+            }
+            return ''
+
+        }
+
+
+</script>
+</body>
+</html>
+
