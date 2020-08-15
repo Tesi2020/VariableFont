@@ -36,6 +36,17 @@ div {
   --text-ANSU: 0;
 }
 
+p{
+    font-family: "E_motion", sans-serif;
+    color: black;
+  }
+
+
+h3 {
+  font-family: "E_motion", sans-serif;
+  font-size: 0.95rem;
+}
+
 .buttonVariable {
   position: absolute;
   bottom: 8rem;
@@ -148,7 +159,7 @@ div {
   padding-right: 1.5rem;;
   padding-bottom: 1.5rem;;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3.5rem;
   background-color: white;
   color: black;
   text-align: center;
@@ -158,6 +169,14 @@ div {
 
   /*border: none;*/
   outline: none;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%
+}
+
+.sentence-col {
 }
 
 .Style {
@@ -280,28 +299,66 @@ div {
 .topnav {
   overflow: hidden;
   background-color: white;
+  position: fixed;
+  top: 0;
+  width:100%;
   padding: 1rem .25rem .35rem .25rem;
   font-family: "E_motion", sans-serif;
   margin-left: 1rem;
+  margin-right: 1rem;
   font-size: 0.95rem;
+
+  z-index: 2;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width:100%;
+  padding: 1rem .25rem .35rem .25rem;
+  font-family: "E_motion", sans-serif;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 0.95rem;
+
+  z-index: 10;
+}
+
+.topnav-right {
+  float: right;
+  background-color: white;
+  color: black;
+  margin-right: 1rem;
 }
 
 .nav {
   overflow: hidden;
   background-color: white;
+  position: fixed;
+  top: 0;
+  width:100%;
   padding: 1rem .25rem .35rem .25rem;
   font-family: "E_motion", sans-serif;
-  margin-left: 1rem;
   font-size: 0.95rem;
+  margin-left: 1rem;
+
+  z-index: 10;
 }
 
 .language {
   overflow: hidden;
   background-color: white;
+  position: fixed;
+  top: 0;
+  width:100%;
   padding: 1rem .25rem .35rem .25rem;
   font-family: "E_motion", sans-serif;
-  margin-left: 1rem;
   font-size: 0.95rem;
+  margin-left: 1rem;
+
+  z-index: 10;
 }
 
 .topnav a {
