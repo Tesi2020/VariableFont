@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" style="background-color:black; margin:0; padding: 0;">
 <head>
   <meta charset="UTF-8">
   <title>Video</title>
@@ -12,28 +12,24 @@
   <meta name="msapplication-navbutton-color"      content="black">
   <meta name="apple-mobile-web-app-status-bar-style"  content="black">
   <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
-<body>
+
+<body style="background-color:black; margin:0; padding: 0;">
 
     <div class="topnav" style="background: none;">
       <a href="index.html">[E·motion]</a>
       <a href="index_About.html">About</a>
       <div class="topnav-right" style="background: none;">
         <a href="index_Specimen.html">Specimen</a>
-        <a href="index_Trial.html" class="active">Trial</a>
+        <a href="index_Trial.html" style="border: 0.2px solid rgb(255,255,255,0.5);"class="active">Trial</a>
       </div>
     </div>
 
-<!--    <video style="z-index: -10;" width="100%" height="100%" controls autoplay="true">
-        <source src="Khan.mp4" type="video/mp4">
-    </video>   --> 
+      <video style="z-index: -10; margin-top:-1.40rem;" width="100%" height="100%" controls>
+          <source src="Khan_1.mp4" type="video/mp4">
+      </video>
 
-    <video style="z-index: -10;" width="100%" height="120%" controls>
-        <source src="Khan.mp4" type="video/mp4">
-    </video>
-
-    <main class="container">
+<main class="container">
     <div id="elements">
     <div id="text">
       <p style="display: flex; justify-content: center; align-items: center; position:absolute; top: 80%;
@@ -41,47 +37,44 @@
     </div>
     </div>
 
-    <!-- div contain slider -->
-    <div>
     <!-- SAJO Controls -->
-    <div class="slider-container">
-      <input type="range" min="-100" max="100" value="0" class="slider" id="text-SAJO" name="text-SAJO" data-index="0">
+    <div class="slider-container" style="background: black; color: white;">
+      <input type="range" min="-100" max="100" value="0" class="slider1" id="text-SAJO" name="text-SAJO" data-index="0">
     <!-- DITR Controls -->
-      <input type="range" min="-100" max="100" value="0" class="slider" id="text-DITR" name="text-DITR" data-index="1">
+      <input type="range" min="-100" max="100" value="0" class="slider1" id="text-DITR" name="text-DITR" data-index="1">
     <!-- ANFE Controls -->
-      <input type="range" min="-100" max="100" value="0" class="slider" id="text-ANFE" name="text-ANFE" data-index="2">
+      <input type="range" min="-100" max="100" value="0" class="slider1" id="text-ANFE" name="text-ANFE" data-index="2">
     <!-- ANSU Controls -->
-      <input type="range" min="-100" max="100" value="0" class="slider" id="text-ANSU" name="text-ANSU" data-index="3">
+      <input type="range" min="-100" max="100" value="0" class="slider1" id="text-ANSU" name="text-ANSU" data-index="3">
 
-      <div class="slider-controls">
-        <label for="text-SAJO" class="slider-label-left">Sadness/ Joy </label>
-        <label for="text-SAJO" class="slider-label-right">
-        [<span class="output" data-index="0">0</span>] 
+      <div class="slider-controls" style="background:black; color: white;">
+        <label for="text-SAJO" style="background:black; color:white;" class="slider-label-left">Sadness/ Joy </label>
+        <label for="text-SAJO" style="background:black; color:white;" class="slider-label-right">
+        [<span class="output" style="background:black; color: white;" data-index="0">0</span>] 
         </label>
       </div>
 
-      <div class="slider-controls">
-        <label for="text-DITR" class="slider-label-left">Disgust/ Trust</label>
-        <label for="text-SAJO" class="slider-label-right">
-        [<span class="output" data-index="1">0</span>] 
+      <div class="slider-controls" style="background:black; color: white;">
+        <label for="text-DITR" style="background:black; color: white;" class="slider-label-left">Disgust/ Trust</label>
+        <label for="text-SAJO" style="background:black; color: white" class="slider-label-right">
+        [<span class="output" style="background:black; color:white;" data-index="1">0</span>] 
         </label>
       </div>
 
-      <div class="slider-controls">
-        <label for="text-ANFE" class="slider-label-left">Anger/ Fear</label>
-        <label for="text-SAJO" class="slider-label-right">
-        [<span class="output" data-index="2">0</span>] 
+      <div class="slider-controls" style="background:black; color: white;">
+        <label for="text-ANFE" style="background:black; color: white;" class="slider-label-left">Anger/ Fear</label>
+        <label for="text-SAJO" style="background:black; color: white;" class="slider-label-right">
+        [<span class="output" style="background:black; color: white;" data-index="2">0</span>] 
         </label>
       </div>
 
-      <div class="slider-controls">
-        <label for="text-ANSU" class="slider-label-left">Anticipation/ Surprise</label>
-        <label for="text-SAJO" class="slider-label-right">
-          [<span class="output" data-index="3">0</span>] 
+      <div class="slider-controls" style="background:black; color: white;">
+        <label for="text-ANSU" style="background:black; color: white;" class="slider-label-left">Anticipation/ Surprise</label>
+        <label for="text-SAJO" style="background:none; color: white;" class="slider-label-right">
+          [<span class="output" style="background:none; color: white;" data-index="3">0</span>] 
         </label>
       </div>
     </div>
-  </div>
   </main>
 
 <script type="text/javascript">
@@ -108,7 +101,7 @@
     }
 </script>
 
-<script src="assets/js/main_slider.js"></script>
+<script src="assets/js/main_slider_Video.js"></script>
 
 </body>
 </html>

@@ -47,6 +47,11 @@ h3 {
   font-size: 0.95rem;
 }
 
+a .active {
+  background-color: black;
+  color: white;
+} 
+
 .buttonVariable {
   position: absolute;
   bottom: 8rem;
@@ -260,8 +265,22 @@ h3 {
   /*color: black;*/
 }
 
-.slider::-webkit-slider-thumb {
+.slider1 {
+  font-family: "E_motion", sans-serif;
   -webkit-appearance: none;
+  width: 90%;
+  height: 0.2px;
+  opacity: 1;
+  border-radius: .25rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+  outline: none;
+  background-color: white;
+  /*color: black;*/
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: ;
   appearance: none;
   width: 10px;
   height: 10px;
@@ -269,18 +288,42 @@ h3 {
   background-color: rgba(0,0,0,1);
 }
 
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: ;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: rgba(255,255,255,1);
+}
+
 .slider::-moz-range-thumb {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
-  background-color: black;
+  background-color: rgb(0,0,0,1);
+}
+
+.slider1::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background-color: rgb(255,255,255,1);
 }
 
 .slider::-webkit-slider-thumb:active {
   cursor: -webkit-grabbing;
 }
 
+.slider1::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+}
+
 .slider::-moz-range-thumb:active {
+  cursor: -moz-grabbing;
+}
+
+.slider1::-moz-range-thumb:active {
   cursor: -moz-grabbing;
 }
 
@@ -358,7 +401,7 @@ h3 {
   /*padding: 1em 1em;*/
   text-decoration: none;
   font-size: 0.95em;
-  border: 0.2px solid rgb(0, 0, 0, 0.5);
+  border: 0.2px solid rgb(0,0,0,0.5);
   width: 6rem;
   height: 2rem;
 
@@ -367,13 +410,12 @@ h3 {
   border-radius: 4px;
 
   background-color: white;
-  border: black;
 }
 
 .topnav a:hover {
   color: white;
   background-color: black;
-  border: 0.2px solid rgb(250, 250, 250, 0.5);
+  border: 0.2px solid rgb(255,255,255,0.5);
 }
 
 .nav a {
@@ -448,7 +490,7 @@ h3 {
 .topnav a.active {
   background-color: black;
   color: white;
-  border: 0.2px solid rgb(250, 250, 250, 0.5);
+  border: 0.2px solid rgb(0, 0, 0, 0.5);
 }
 
 .language a.active {
