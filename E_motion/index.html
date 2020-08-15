@@ -16,23 +16,13 @@
 </head>
 <body>
 
-  <div class="topnav">
-    <a href="index.html" class="active">[E·motion]</a>
-    <a href="index_About_ITA.html">About</a>
-    <div class="topnav-right">
-      <a href="index_Specimen.html">Specimen</a>
-      <a href="index_Tial.html">Trial</a>
-    </div>
-  </div>
-
     <video width="800" controls autoplay="true">
         <source src="Khan.mp4" type="video/mp4">
     </video>
 
-    <div id="out"></div>
+   <div id="out"></div>
 
-    <script type="text/javascript">
-
+     <script type="text/javascript">
         fetch('st.json').then(r => {
             return r.json()
         }).then(json => {
@@ -53,10 +43,7 @@
                 }
             }
             return ''
-
         }
-
-
 </script>
 </body>
 </html>
