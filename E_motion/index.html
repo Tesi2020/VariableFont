@@ -11,40 +11,105 @@
   <meta name="theme-color"              content="black">
   <meta name="msapplication-navbutton-color"      content="black">
   <meta name="apple-mobile-web-app-status-bar-style"  content="black">
-  <!-- <link rel="stylesheet" href="assets/css/style1.css"> -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
 
-    <video width="800" controls autoplay="true">
+    <div class="topnav" style="background: none;">
+      <a href="index.html">[E·motion]</a>
+      <a href="index_About_ITA.html">About</a>
+      <div class="topnav-right" style="background: none;">
+        <a href="index_Specimen.html">Specimen</a>
+        <a href="index_Trial.html" class="active">Trial</a>
+      </div>
+    </div>
+
+<!--    <video style="z-index: -10;" width="100%" height="100%" controls autoplay="true">
+        <source src="Khan.mp4" type="video/mp4">
+    </video>   --> 
+
+    <video style="z-index: -10;" width="100%" height="120%" controls>
         <source src="Khan.mp4" type="video/mp4">
     </video>
 
-   <div id="out"></div>
+    <main class="container">
+    <div id="elements">
+    <div id="text">
+      <p style="display: flex; justify-content: center; align-items: center; position:absolute; top: 80%;
+      left: 50%; transform: translate(-50%, -50%); border: none; outline: none; font-size: 2rem; color: white; z-index:10; background: none;" class="demo-text" id="out"></p>
+    </div>
+    </div>
 
-     <script type="text/javascript">
-        fetch('st.json').then(r => {
-            return r.json()
-        }).then(json => {
-            const out   = document.querySelector('#out')
-            const video = document.querySelector('video')
-            const sottoTitoli = json
+    <!-- div contain slider -->
+    <div>
+    <!-- SAJO Controls -->
+    <div class="slider-container">
+      <input type="range" min="-100" max="100" value="0" class="slider" id="text-SAJO" name="text-SAJO" data-index="0">
+    <!-- DITR Controls -->
+      <input type="range" min="-100" max="100" value="0" class="slider" id="text-DITR" name="text-DITR" data-index="1">
+    <!-- ANFE Controls -->
+      <input type="range" min="-100" max="100" value="0" class="slider" id="text-ANFE" name="text-ANFE" data-index="2">
+    <!-- ANSU Controls -->
+      <input type="range" min="-100" max="100" value="0" class="slider" id="text-ANSU" name="text-ANSU" data-index="3">
 
-            setInterval(function(){
-                const t = video.currentTime * 1000
-                out.innerHTML = find(sottoTitoli, t)
-            }, 20);
-        })
+      <div class="slider-controls">
+        <label for="text-SAJO" class="slider-label-left">Sadness/ Joy </label>
+        <label for="text-SAJO" class="slider-label-right">
+        [<span class="output" data-index="0">0</span>] 
+        </label>
+      </div>
 
-        function find(vt, t){
-            for (const e of vt) {
-                if (t >= e.start && t <= e.end) {
-                    return e.part
-                }
-            }
-            return ''
+      <div class="slider-controls">
+        <label for="text-DITR" class="slider-label-left">Disgust/ Trust</label>
+        <label for="text-SAJO" class="slider-label-right">
+        [<span class="output" data-index="1">0</span>] 
+        </label>
+      </div>
+
+      <div class="slider-controls">
+        <label for="text-ANFE" class="slider-label-left">Anger/ Fear</label>
+        <label for="text-SAJO" class="slider-label-right">
+        [<span class="output" data-index="2">0</span>] 
+        </label>
+      </div>
+
+      <div class="slider-controls">
+        <label for="text-ANSU" class="slider-label-left">Anticipation/ Surprise</label>
+        <label for="text-SAJO" class="slider-label-right">
+          [<span class="output" data-index="3">0</span>] 
+        </label>
+      </div>
+    </div>
+  </div>
+  </main>
+
+<script type="text/javascript">
+  fetch('st.json').then(r => {
+    return r.json()
+  }).then(json => {
+    const out   = document.querySelector('#out')
+    const video = document.querySelector('video')
+    const sottoTitoli = json
+
+    setInterval(function(){
+      const t = video.currentTime * 1000
+        out.innerHTML = find(sottoTitoli, t)
+      }, 20);
+    })
+
+    function find(vt, t){
+      for (const e of vt) {
+        if (t >= e.start && t <= e.end) {
+          return e.part
+          }
         }
+      return ''
+    }
 </script>
+
+<script src="assets/js/main_slider.js"></script>
+
 </body>
 </html>
 
