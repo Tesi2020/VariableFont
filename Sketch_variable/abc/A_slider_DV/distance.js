@@ -89,12 +89,12 @@ function distance() {
   let fontSize = size.x/5
   const deep = size.x/3
 
-<<<<<<< HEAD
+
   let wave = (sin(frameCount * 0.005) * 500);
   //dimensione varia alla distanza
-=======
+
   letter.style["font-size"] = fontSize + "px"; //dimensione varia alla distanza
->>>>>>> 8c194fce2746ffd796fbf688e7736131b7957a2c
+
 
   console.log(deep)
 
