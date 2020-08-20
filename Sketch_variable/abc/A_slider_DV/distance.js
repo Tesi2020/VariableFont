@@ -98,7 +98,7 @@ function distance() {
   console.log(deep)
 
   //mappa il livello di  distanza deep con i valori del font variabile
-  const res = floor(map(deep/4,20,200,0,300))
+  const res = floor(map(deep,130,500,0,300))
 
   lettera.querySelectorAll('p').forEach(e => {
     e.style["display"] = "none"
