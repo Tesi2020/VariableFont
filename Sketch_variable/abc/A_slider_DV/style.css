@@ -49,6 +49,7 @@
         }
         #divtext{
             position: relative;
+            padding-bottom: 20px;
         }
 
 
@@ -61,7 +62,7 @@
             float: left;
             letter-spacing: -0.6px;
             line-height: 90%;
-            bottom: 5%;
+            bottom: 20%;
             position: absolute;
             padding-bottom:0;
 
@@ -78,7 +79,7 @@
             text-align: center;
             letter-spacing: -0.6px;
             line-height: 90%;
-            bottom: 0;
+            bottom: 20%;
             right:0;
             position: absolute;
 
@@ -308,46 +309,56 @@
         p.text1{
 
             font-size: 200px;
+            margin:0;
         }
 
         #text p.text2{
 
             font-size: 150px;
+            margin:0;
         }
 
         #text p.text3{
 
             font-size: 100px;
+            margin:0;
         }
 
         #text p.text4{
 
             font-size: 50px;
+            margin:0;
         }
 
         #text p.text5{
 
             font-size: 30px;
+            margin:0;
         }
 
         #text p.text6{
 
             font-size: 20px;
+            margin:0;
         }
 
         #text p.text7{
 
             font-size: 15px;
+            margin:0;
         }
         #text p.text8{
 
             font-size: 10px;
+            margin:0;
         }
         #text p.text9{
 
             font-size: 8px;
+            margin:0;
         }
         #text p.text10{
 
             font-size: 6px;
+            margin:0;
         }
