@@ -115,6 +115,8 @@ function distance() {
     const resmap = floor(map(res,0,300,1,150))
     e.previousSibling.innerHTML = s + "</br>———</br>" + resmap
     e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + resmap
+    e.previousSibling.previousSibling.style["display"] = "block"
+    e.previousSibling.style["display"] = "block"
     e.style["font-variation-settings"] = " 'SIZE' " + res
      //heightLetter deve avere lo stesso valore di "font-size"
     //e.style.transform = "translateY(-" + fontSize*0.7 + "px)";
