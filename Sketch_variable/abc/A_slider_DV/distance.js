@@ -98,7 +98,7 @@ function distance() {
   console.log(deep)
 
   //mappa il livello di  distanza deep con i valori del font variabile
-  const res = floor(map(deep,130,500,0,300))
+  const res = floor(map(deep,210,500,0,300))
 
   lettera.querySelectorAll('p').forEach(e => {
     e.style["display"] = "none"
@@ -110,11 +110,29 @@ function distance() {
 
   lettera.querySelectorAll('.selected').forEach(e => {
     e.style["display"] = "block"
+    // e.style["font-size"] = fontSize + "px";
+
     e.style["font-size"] = fontSize + "px";
+
     const s = floor(fontSize)
     const resmap = floor(map(res,0,300,1,150))
-    e.previousSibling.innerHTML = s + "</br>———</br>" + resmap
+   
+    if (resmap>=150) {
+      e.previousSibling.innerHTML = s + "</br>———</br>" + 150
+    e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + 150
+    } else {
+      e.previousSibling.innerHTML = s + "</br>———</br>" + resmap
     e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + resmap
+    }
+    if (resmap<=0) {
+      e.previousSibling.innerHTML = s + "</br>———</br>" + 1
+    e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + 1
+    } else {
+      e.previousSibling.innerHTML = s + "</br>———</br>" + resmap
+    e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + resmap
+    }
+
+
     e.previousSibling.previousSibling.style["display"] = "block"
     e.previousSibling.style["display"] = "block"
     e.style["font-variation-settings"] = " 'SIZE' " + res

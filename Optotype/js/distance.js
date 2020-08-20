@@ -9,7 +9,6 @@ let size = new p5.Vector();
 let ratio = 1;
 let speed = .3;
 //recupero il div #text
-const letter = document.getElementById("text")
 const bDistance = document.querySelector("#buttonDistance")
 const bSliders = document.querySelector("#buttonSliders")
 
@@ -75,7 +74,7 @@ function draw(){
 
      if(bDistance.dataset.over == "false"){
       sliders()
-      letter.style["font-size"] = "150px";
+      lettera.style["font-size"] = "150px";
         
     }else if(bDistance.dataset.over == "true"){
       distance()
@@ -89,24 +88,71 @@ function distance() {
   let fontSize = size.x/5
   const deep = size.x/3
 
-  letter.style["font-size"] = fontSize + "px"; //dimensione varia alla distanza
+
+  let wave = (sin(frameCount * 0.005) * 500);
+  //dimensione varia alla distanza
+
+//dimensione varia alla distanza
+
 
   console.log(deep)
 
   //mappa il livello di  distanza deep con i valori del font variabile
-  const res = floor(map(deep/4,20,200,0,300))
+  const res = floor(map(deep,210,500,0,300))
 
-  //Il CSS che va a modificare
-  letter.style["font-variation-settings"] = " 'SIZE' " + res
+  lettera.querySelectorAll('p').forEach(e => {
+    e.style["display"] = "none"
+  })
 
-  //heightLetter deve avere lo stesso valore di "font-size"
-  letter.style.transform = "translateY(-" + fontSize*0.7 + "px)";
+  lettera.querySelectorAll('span').forEach(e => {
+    e.style["display"] = "none"
+  })
+
+  lettera.querySelectorAll('.selected').forEach(e => {
+    e.style["display"] = "block"
+    // e.style["font-size"] = fontSize + "px";
+
+    e.style["font-size"] = fontSize + "px";
+
+    const s = floor(fontSize)
+    const resmap = floor(map(res,0,300,1,150))
+   
+    if (resmap>=150) {
+      e.previousSibling.innerHTML = s + "</br>———</br>" + 150
+    e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + 150
+    } else {
+      e.previousSibling.innerHTML = s + "</br>———</br>" + resmap
+    e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + resmap
+    }
+    if (resmap<=0) {
+      e.previousSibling.innerHTML = s + "</br>———</br>" + 1
+    e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + 1
+    } else {
+      e.previousSibling.innerHTML = s + "</br>———</br>" + resmap
+    e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + resmap
+    }
+
+
+    e.previousSibling.previousSibling.style["display"] = "block"
+    e.previousSibling.style["display"] = "block"
+    e.style["font-variation-settings"] = " 'SIZE' " + res
+     //heightLetter deve avere lo stesso valore di "font-size"
+    //e.style.transform = "translateY(-" + fontSize*0.7 + "px)";
+  })
+
+
   
 }
 
 function sliders() {
 
   bDistance.classList.remove("active")
+  lettera.querySelectorAll('p').forEach(e => {
+    e.style["display"] = "block"
+  })
+    lettera.querySelectorAll('span').forEach(e => {
+    e.style["display"] = "block"
+  })
   
 }
 
