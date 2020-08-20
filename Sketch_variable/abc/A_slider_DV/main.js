@@ -47,9 +47,10 @@ function windowResized(){
 function sliderChangeResolution(evt) {
 
   const v = evt.target.value
-
+  const vmap = floor(map(v,0,300,1,150))
   lettera.querySelectorAll('.selected').forEach(e => {
-    e.previousSibling.innerHTML = v + "<br>pt"
+    e.previousSibling.previousSibling.innerHTML = "200" + "</br>———</br>" + vmap
+    e.previousSibling.innerHTML = "200" + "</br>———</br>" + vmap
     e.style["font-variation-settings"] = " 'SIZE' " + v
   })
 }

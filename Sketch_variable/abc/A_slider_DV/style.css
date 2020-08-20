@@ -27,7 +27,7 @@
             height:80vh;
 
             font-family: ‘Font’;
-            text-align: center;
+            
             padding: 10% 0;
         
             color: black;
@@ -38,6 +38,53 @@
             font-kerning: normal;
             z-index: -1;
         }
+
+        #text p{
+            font-family: ‘Font’;
+            font-variation-settings: 'SIZE' 300;
+            /*letter-spacing: -1px;*/
+            font-kerning: normal;
+            text-align: center;
+
+        }
+        #divtext{
+            position: relative;
+        }
+
+
+        #divtext span.val {
+            font-family: ‘Font’;
+            font-variation-settings: 'SIZE' 1;
+            font-size: 8px !important;
+            padding: 10px;
+            text-align: center;
+            float: left;
+            letter-spacing: -0.6px;
+            line-height: 90%;
+            bottom: 5%;
+            position: absolute;
+            padding-bottom:0;
+
+        }
+
+
+        #text span.valright {
+            font-family: ‘Font’;
+            font-variation-settings: 'SIZE' 1;
+            font-size: 8px !important;
+            padding: 10px;
+            padding-bottom:0;
+            float:right;
+            text-align: center;
+            letter-spacing: -0.6px;
+            line-height: 90%;
+            bottom: 0;
+            right:0;
+            position: absolute;
+
+
+        }
+
 
         .slidecontainer {
             width: 102vw;
@@ -258,32 +305,49 @@
 
         }
 
-        p .text1{
-
-            font-size: 300px;
-        }
-
-        p .text2{
+        p.text1{
 
             font-size: 200px;
         }
 
-        p .text3{
+        #text p.text2{
 
             font-size: 150px;
         }
 
-        p .text4{
+        #text p.text3{
 
             font-size: 100px;
         }
 
-        p .text5{
+        #text p.text4{
 
             font-size: 50px;
         }
 
-        p .text6{
+        #text p.text5{
+
+            font-size: 30px;
+        }
+
+        #text p.text6{
 
             font-size: 20px;
+        }
+
+        #text p.text7{
+
+            font-size: 15px;
+        }
+        #text p.text8{
+
+            font-size: 10px;
+        }
+        #text p.text9{
+
+            font-size: 8px;
+        }
+        #text p.text10{
+
+            font-size: 6px;
         }
