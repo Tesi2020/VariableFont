@@ -23,33 +23,24 @@
             top: -500px;
             right: 0;
             bottom: 0; */
-            width: 100vw;
+            width: 80vw;
             height:80vh;
-            text-align: center;
-            margin: 10;
-            z-index: -1;
-            color: black;
-            padding: 10% 0;
 
-        }
-        
-        #text p{
             font-family: ‘Font’;
+            text-align: center;
+            padding: 10% 0;
+        
+            color: black;
+            margin: 10;
+            
             font-variation-settings: 'SIZE' 300;
             /*letter-spacing: -1px;*/
             font-kerning: normal;
-
-        }
-
-        #text span.val {
-            font-family: ‘Font’;
-            font-variation-settings: 'SIZE' 1;
-            font-size: 10px !important;
-
+            z-index: -1;
         }
 
         .slidecontainer {
-            width: 100vw;
+            width: 102vw;
             background-color: white;
             z-index: 1;
             border: 1px solid #C0C0C0;
