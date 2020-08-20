@@ -88,6 +88,7 @@ function distance() {
   let fontSize = size.x/5
   const deep = size.x/3
 
+  let wave = (sin(frameCount * 0.005) * 500);
   //dimensione varia alla distanza
 
   console.log(deep)
