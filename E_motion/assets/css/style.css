@@ -116,7 +116,7 @@ a .active {
   font-family: "E_motion", sans-serif;
 
   /*font-size: "font-size";*/
-  font-size: 10rem;
+  /*font-size: 10rem;*/
   font-SAJO: var(--text-SAJO);
   font-ANFE: var(--text-ANFE);
   font-DITR: var(--text-DITR);
@@ -125,6 +125,8 @@ a .active {
 
   background-color: black;
   color: white;
+
+  z-index: -10 !important;
 }
 
 .about-text {
