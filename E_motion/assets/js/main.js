@@ -85,7 +85,7 @@ function voice(){
   // console.log(fontSize);
   //letterAbout.style["font-size"] = 1.5 + fontSize + "rem";
   // letterAbout.style.transform = "translateY(-" + fontSize*0.7 + "px)";
-  letter.style["font-size"] = 7.5 + fontSize + "rem";
+  letter.style["font-size"] = 9 + fontSize + "vw";
   // letter.style.transform = "translateY(-" + fontSize*0.7 + "px)";
 }
 

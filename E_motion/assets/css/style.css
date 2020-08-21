@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
-  display: block;
-  background-color: white;
+  display: block !important;
+  background-color: black;
   color: black;
 }
 
@@ -13,8 +13,9 @@ html {
 body {
   margin: 0;
   padding:0;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
+  -webkit-font-smoothing: antialiased;
 }
 
 div {
@@ -27,6 +28,7 @@ div {
   font-stretch: 75% 100%;
   font-style: oblique 0deg 12deg;
   font-weight: 100 900;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -38,7 +40,7 @@ div {
 
 p{
     font-family: "E_motion", sans-serif;
-    color: black;
+    color: white;
   }
 
 
@@ -48,8 +50,8 @@ h3 {
 }
 
 a .active {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 } 
 
 .buttonVariable {
@@ -60,7 +62,7 @@ a .active {
 
 .btn {
   font-family: "E_motion", sans-serif;
-  border: 0.2px solid rgb(0,0,0,0.5);
+  border: 0.2px solid rgb(255,255,255,0.5);
   outline: none;
   padding: .35rem .35rem .45rem .35rem;
   /*padding: .35rem .35rem .45rem .35rem;*/
@@ -75,29 +77,29 @@ a .active {
   margin-top: 1rem;
   border-radius: 4px;
   display: block;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 /* Style the active class, and buttons on mouse-over */
 .active, .btn:hover, .btn:active {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .container {
   font-family: "E_motion", sans-serif;
   text-align: center;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .container-specimen {
   font-family: "E_motion", sans-serif;
   display: grid;
   margin-right: 1rem;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   text-align: center;
   padding-top: 1rem;
 }
@@ -121,8 +123,8 @@ a .active {
   font-ANSU: var(--text-ANSU);
   font-variation-settings: "SAJO" var(--text-SAJO), "DITR" var(--text-DITR), "ANFE" var(--text-ANFE), "ANSU" var(--text-ANSU);
 
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .about-text {
@@ -147,8 +149,8 @@ a .active {
   margin-top: 1rem;
   margin-left: 1rem;
   text-align: left;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 
   z-index:-1;
 }
@@ -163,10 +165,10 @@ a .active {
   padding-bottom: 1.5rem;;
   text-align: center;
   font-size: 3.5rem;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   text-align: center;
-  border: 0.2px solid rgb(0,0,0,0.5);
+  border: 0.2px solid rgb(255,255,255,0.5);
   border-radius: 20px;
   padding-top: 1rem;
 
@@ -201,13 +203,14 @@ a .active {
 
 .slider-container {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 3rem;
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 3fr 3fr 3fr;
   padding: 0rem 0rem 0rem 1.5rem;
-  background-color: white;
+  background-color: black;
   /*color: black;*/
+  z-index: 21 !important;
 } 
 
 .slider-controls {
@@ -216,30 +219,30 @@ a .active {
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
-  background-color: white;
+  background-color: black;
   /*color: black;*/
 }
 
 .slider-label {
   font-size: 0.95em;
   margin-right: 2.25vw;
-  color: black;
+  color: white;
   text-align: right;
   font-style: normal;
   font-weight: 650;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: none;
 }
 
 .slider-label-right {
   font-size: 0.95em;
   margin-right: 2.25vw;
-  color: black;
+  color: white;
   text-align: right;
   font-style: normal;
   font-weight: 650;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: none;
 }
 
 .slider-label-left {
@@ -247,21 +250,21 @@ a .active {
   text-align: left;
   font-style: normal;
   font-weight: 650;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: none;
 }
 
 .slider {
   font-family: "E_motion", sans-serif;
   -webkit-appearance: none;
   width: 90%;
-  height: 0.2px;
+  height: 2px;
   opacity: 1;
   border-radius: .25rem;
   -webkit-transition: .2s;
   transition: .2s;
   outline: none;
-  background-color: black;
+  background-color: none;
   /*color: black;*/
 }
 
@@ -269,7 +272,7 @@ a .active {
   font-family: "E_motion", sans-serif;
   -webkit-appearance: none;
   width: 90%;
-  height: 0.2px;
+  height: 2px;
   opacity: 1;
   border-radius: .25rem;
   -webkit-transition: .2s;
@@ -285,7 +288,7 @@ a .active {
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background-color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
 }
 
 .slider1::-webkit-slider-thumb {
@@ -326,27 +329,11 @@ a .active {
 .slider1::-moz-range-thumb:active {
   cursor: -moz-grabbing;
 }
-
 .topnav {
   overflow: hidden;
-  background-color: white;
+  background-color: black;
   position: fixed;
-  top: 0;
-  width:100%;
-  padding: 1rem .25rem .35rem .25rem;
-  font-family: "E_motion", sans-serif;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  font-size: 0.95rem;
-
-  z-index: 2;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: white;
-  position: fixed;
-  top: 0;
+  top: 0.5rem;
   width:100%;
   padding: 1rem .25rem .35rem .25rem;
   font-family: "E_motion", sans-serif;
@@ -359,14 +346,14 @@ a .active {
 
 .topnav-right {
   float: right;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   margin-right: 1rem;
 }
 
 .nav {
   overflow: hidden;
-  background-color: white;
+  background-color: black;
   position: fixed;
   top: 0;
   width:100%;
@@ -380,7 +367,7 @@ a .active {
 
 .language {
   overflow: hidden;
-  background-color: white;
+  background-color: black;
   position: fixed;
   top: 0;
   width:100%;
@@ -396,12 +383,12 @@ a .active {
   font-family: "E_motion", sans-serif;
   float: left;
   display: block;
-  color: black;
+  color: white;
   text-align: center;
   /*padding: 1em 1em;*/
   text-decoration: none;
   font-size: 0.95em;
-  border: 0.2px solid rgb(0,0,0,0.5);
+  border: 0.2px solid rgb(255,255,255,0.5);
   width: 6rem;
   height: 2rem;
 
@@ -409,25 +396,28 @@ a .active {
   padding: .35rem .35rem .45rem .35rem;
   border-radius: 4px;
 
-  background-color: white;
+  background-color:none;
+
+  opacity: 1;
 }
 
 .topnav a:hover {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
   border: 0.2px solid rgb(255,255,255,0.5);
+  opacity: 1;
 }
 
 .nav a {
   font-family: "E_motion", sans-serif;
   float: left;
   display: block;
-  color: black;
+  color: white;
   text-align: center;
   /*padding: 1em 1em;*/
   text-decoration: none;
   font-size: 0.95em;
-  border: 0.2px solid rgb(0, 0, 0, 0.5);
+  border: 0.2px solid rgb(255, 255, 255, 0.5);
   width: 6rem;
   height: 2rem;
 
@@ -437,15 +427,15 @@ a .active {
 }
 
 .nav a:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .attached a {
   float: left;
-  color: black;
+  color: white;
   font-family: "E_motion", sans-serif;
-  border: 1px solid black;
+  border: 1px solid white;
   margin-right: 1rem;
   cursor: pointer;
   font-size: 1rem;
@@ -455,20 +445,19 @@ a .active {
   outline: none;
   text-decoration:none;
   width: 5.8rem;
-  background-color: white;
-  color: black;
+  background-color: black;
 }
 
 .language a {
   font-family: "E_motion", sans-serif;
   float: left;
   display: block;
-  color: black;
+  color: white;
   text-align: center;
   /*padding: 1em 1em;*/
   text-decoration: none;
   font-size: 0.95em;
-  border: 0.2px solid rgb(0, 0, 0, 0.5);
+  border: 0.2px solid rgb(255, 255, 255, 0.5);
   width: 6rem;
   height: 2rem;
 
@@ -478,42 +467,44 @@ a .active {
 }
 
 .language a:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .attached a.active {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .topnav a.active {
-  background-color: black;
-  color: white;
-  border: 0.2px solid rgb(0, 0, 0, 0.5);
+  background-color: white;
+  color: black;
+  border: 0.2px solid rgb(255, 255, 255, 0.5);
+  opacity: 1;
 }
 
 .language a.active {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+  opacity: 1;
 }
 
 .topnav-right {
   float: right;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .attached-right {
   float: right;
-  background-color: white;
-  color: black;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
 }
 
 .language-right {
   float: right;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 /*.textarea {
@@ -534,13 +525,13 @@ a .active {
   margin-left: 40px;
   margin-top: 6px;
   transition: 0.1s;
-  background: black;
+  background: none;
 }
 
 .button:hover {
   width: 30px;
   height: 30px;
-  background: black;
+  background: none;
   color: white;
   display: block;
   top: 10px;
@@ -551,27 +542,3 @@ a .active {
   margin-top: 6px;
   transition: 0.1s;
 }
-
-.button-invert {
-  width: 30px;
-  height: 30px;
-  background: white;
-  display: block;
-  top: 10px;
-  right: 10px;
-  border-radius: 100%;
-  bottom: 20px; 
-  margin-left: 40px;
-  margin-top: 6px;
-  transition: 0.1s;
-}
-
-.button-invert:focus {
-  outline: none!important;
-}
-
-.attivo {
-  background: white;
-  color: black;
-}
-
