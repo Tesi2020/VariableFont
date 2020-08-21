@@ -51,13 +51,8 @@ function sliderChangeResolution(evt) {
   lettera.querySelectorAll('.selected').forEach(e => {
     let computedFontSize = window.getComputedStyle(e).fontSize
     let computedSize = floor(parseInt(computedFontSize))
-   if (vmap>=150) {
-      e.previousSibling.innerHTML = s + "</br>———</br>" + 150
-    e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + 150
-    } else {
-      e.previousSibling.innerHTML = s + "</br>———</br>" + vmap
-    e.previousSibling.previousSibling.innerHTML = s + "</br>———</br>" + vmap
-    }
+    e.previousSibling.previousSibling.innerHTML = computedSize + "</br>———</br>" + vmap
+    e.previousSibling.innerHTML = computedSize + "</br>———</br>" + vmap
     e.style["font-variation-settings"] = " 'SIZE' " + v
 
     
