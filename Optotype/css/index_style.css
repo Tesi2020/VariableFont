@@ -45,7 +45,14 @@
             /*letter-spacing: -1px;*/
             font-kerning: normal;
             text-align: center;
+            border: none;
+            outline: none;
+            color: rgb(40,40,40);
 
+        }
+
+        .selected{
+            color: black !important;
         }
         #divtext{
             position: relative;
@@ -179,6 +186,7 @@
           cursor: pointer;
           float: left;
           width: 51vw;
+          outline: none;
         }
 
         .buttonSliders{width: 100%;}

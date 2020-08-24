@@ -54,6 +54,8 @@ function sliderChangeResolution(evt) {
     e.previousSibling.previousSibling.innerHTML = computedSize + "</br>———</br>" + vmap
     e.previousSibling.innerHTML = computedSize + "</br>———</br>" + vmap
     e.style["font-variation-settings"] = " 'SIZE' " + v
+    e.style["color"] = "black !important"
+
 
     
 
