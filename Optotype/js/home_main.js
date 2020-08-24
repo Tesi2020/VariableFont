@@ -27,7 +27,7 @@ function handleScrollEvent(event) {
 	lettera.style["font-variation-settings"] = " 'SIZE' " + prova
 
   console.log(document.documentElement.scrollTop,document.body.scrollTop)
-   if (document.body.scrollTop > 9064 || document.documentElement.scrollTop > 9064) {
+   if (document.body.scrollTop > 9051 || document.documentElement.scrollTop > 9051) {
     const url = "index.html"
     window.location = url
   } 
