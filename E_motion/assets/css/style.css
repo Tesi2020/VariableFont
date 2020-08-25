@@ -483,7 +483,7 @@ a .active {
 .topnav a.active {
   background-color: white;
   color: black;
-  border: 1px solid rgb(255,255,255,2);
+  border: 1px solid rgb(255,255,255,1);
   opacity: 1;
 }
 
@@ -501,7 +501,7 @@ a .active {
 
 .attached-right {
   float: right;
-  background-color: rgba(0,0,0,2);
+  background-color: rgba(0,0,0,1);
   color: white;
 }
 
