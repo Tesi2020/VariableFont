@@ -404,6 +404,37 @@ a .active {
   opacity: 1;
 }
 
+.topnav-right a {
+  font-family: "E_motion", sans-serif;
+
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  /*padding: 1em 1em;*/
+  text-decoration: none;
+  font-size: 1em;
+  border: 1px solid rgb(255,255,255,1);
+  width: 7rem;
+  height: 2.2rem;
+
+  margin-right: 1rem;
+  padding: .45rem .35rem .45rem .35rem;
+  border-radius: 4px;
+
+  background-color:none;
+
+  opacity: 1;
+}
+
+.topnav-right a:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid rgb(255,255,255,1);
+  opacity: 1;
+}
+
+
 .topnav a:hover {
   color: black;
   background-color: white;
