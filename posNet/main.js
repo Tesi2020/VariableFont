@@ -61,14 +61,15 @@ function draw() {
   //posLevelSmooth += (size.x - posLevelSmooth) * 0.09
   //lettera.style["font-size"] = 500 + "px"; 
   // blocca alla dimensione massima
-  if(size.x/5 > 301) {
-      lettera.style["font-size"] = 300 + "px"; 
+  let sizeFont= map(size.x/5,180,430,75,200)
+  if(sizeFont > 201) {
+      lettera.style["font-size"] = 200 + "px"; 
   } else{
-      lettera.style["font-size"] = size.x/5 + "px"; //dimensione varia alla distanza
+      lettera.style["font-size"] = sizeFont + "px"; //dimensione varia alla distanza
   }
 
 
-
+ console.log(size.x/5)
   //misuro dimensioni pagina per JS
   //const width = window.innerWidth
   //const height = window.innerHeight
@@ -79,11 +80,12 @@ function draw() {
   let level = map(deep/2, 0, 300, 0,100)
 
 
-  console.log(deep)
+
+  //console.log(deep)
   //map
   const w = deep / width * 1000.0
   //mappa il livello di  distanza deep con i valori del font variabile
-  const prova = floor(map(deep/4,20,200,0,300))
+  const prova = floor(map(size.x/5,200,430,0,300))
   const c = x / width * 1000.0
 
   //Il CSS che va a modificare
@@ -104,7 +106,7 @@ function draw() {
   //heightLetter deve avere lo stesso valore di "font-size"
   if (size.x/5 > 301){
   lettera.style.transform = "translateY(-" + 300 *0.7 + "px)";
-} else {lettera.style.transform = "translateY(-" + heightLetter*0.7 + "px)";
+} else {lettera.style.transform = "translateY(-" + sizeFont*0.7 + "px)";
 
 }
   //console.log(w)
