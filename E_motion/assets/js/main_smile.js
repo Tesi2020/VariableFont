@@ -17,6 +17,7 @@ function draw(){
   const d = micLevelSmooth * 150
 
   smile.style["font-variation-settings"] = " 'SAJO' " + d + "," + " 'ANFE' " + 0 + "," + " 'DITR' " + 0 + "," + " 'ANSU' " + 0;
+}
 
 
 window.addEventListener("deviceorientation", function(event) {
