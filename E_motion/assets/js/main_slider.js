@@ -13,8 +13,8 @@ sliders.forEach(slider => {
     const sliderIndex = slider.getAttribute("data-index");
     const output = document.querySelector(`.output[data-index="${sliderIndex}"]`);
     slider.oninput = function() {
-      container.style.setProperty(`--${this.id}`, this.value);
-      output.innerHTML = this.value;
+      container.style.setProperty(`--${this.id}`, 100);
+      output.innerHTML = 100;
     };
   });
 

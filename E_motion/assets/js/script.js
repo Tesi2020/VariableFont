@@ -1,4 +1,6 @@
 var vid = document.getElementById("video");
+var btn = document.getElementById('play-pause');
+
 vid.ontimeupdate = function(){
   var percentage = ( vid.currentTime / vid.duration ) * 100;
   $("#custom-seekbar span").css("width", percentage+"%");
