@@ -104,8 +104,8 @@ function draw() {
 
   //per trasformare la posizione e inserire la lettera centrale 
   //heightLetter deve avere lo stesso valore di "font-size"
-  if (size.x/5 > 301){
-  lettera.style.transform = "translateY(-" + 300 *0.7 + "px)";
+  if (size.x/5 > 201){
+  lettera.style.transform = "translateY(-" + 200 *0.7 + "px)";
 } else {lettera.style.transform = "translateY(-" + sizeFont*0.7 + "px)";
 
 }
