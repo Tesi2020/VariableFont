@@ -2,11 +2,9 @@ let mic;
 let micInit = false;
 let micLevelSmooth = 0;
 
-//seleziono la lettera dall'HTML
-const smile = document.getElementById("demo-text");
+const smile = document.getElementById("text");
 
 function setup(){
-  createCanvas(windowWidth,windowHeight);
   mic = new p5.AudioIn();
   mic.start();
 }
@@ -14,25 +12,9 @@ function setup(){
 function draw(){
   let micLevel = mic.getLevel() * 100;
   micLevelSmooth += (micLevel - micLevelSmooth) * 0.08;
-  //miusra dimensioni pagina
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  // const s = min(width, height) / 50
-  const d = micLevelSmooth * 100;
+  const fontSize = micLevelSmooth * 0.08;
 
-  //dimesnione font
-  // lettera.style["font-size"] = "200px";
-
-  //rimane in ascolto delle mosse del mouse e se ci fossero fanno quello che dice la funzione
-  // document.addEventListener("mousemove", function(e){
-
-    //coordinate mouse 
-    // const x = e.pageX
-    // const y = e.pageY
-
-    //Il CSS che va a modificare
-    smile.style["font-variation-settings"] = " 'SAJO' " + d;
-  // })
+  smile.style["font-size"] = 9 + fontSize + "rem";
 }
 
 window.addEventListener("deviceorientation", function(event) {
@@ -53,5 +35,5 @@ function touchStarted() {
 }
 
 function windowResized(){
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight)
 }
