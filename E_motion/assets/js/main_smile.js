@@ -18,10 +18,10 @@ function draw(){
   const width = window.innerWidth
   const height = window.innerHeight
   // const s = min(width, height) / 50
-  const d = micLevelSmooth;
+  const d = micLevelSmooth * 5;
 
   //dimesnione font
-  lettera.style["font-size"] = "20rem";
+  lettera.style["font-size"] = "50rem";
 
     //Il CSS che va a modificare
     lettera.style["font-variation-settings"] = " 'DITR' " + d;
