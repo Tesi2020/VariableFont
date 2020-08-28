@@ -30,9 +30,6 @@ function draw(){
     // const x = e.pageX
     // const y = e.pageY
 
-    // const c = y / height * 1000.0
-    const c = micLevelSmooth
-
     //Il CSS che va a modificare
     lettera.style["font-variation-settings"] = " 'SAJO' " + d;
   // })
