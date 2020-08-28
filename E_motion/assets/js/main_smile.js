@@ -3,7 +3,7 @@ let micInit = false;
 let micLevelSmooth = 0;
 
 //seleziono la lettera dall'HTML
-const lettera = document.getElementById("smile-text");
+const smile = document.getElementById("demo-text");
 
 function setup(){
   createCanvas(windowWidth,windowHeight);
@@ -31,7 +31,7 @@ function draw(){
     // const y = e.pageY
 
     //Il CSS che va a modificare
-    lettera.style["font-variation-settings"] = " 'SAJO' " + d;
+    smile.style["font-variation-settings"] = " 'SAJO' " + d;
   // })
 }
 
