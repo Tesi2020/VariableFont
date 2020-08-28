@@ -21,7 +21,7 @@ function draw(){
   const d = micLevelSmooth * 10;
 
   //dimesnione font
-  lettera.style["font-size"] = "500px";
+  lettera.style["font-size"] = "5rem";
 
     //Il CSS che va a modificare
     lettera.style["font-variation-settings"] = " 'DITR' " + d;
