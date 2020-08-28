@@ -3,7 +3,7 @@ let micInit = false;
 let micLevelSmooth = 0;
 
 //seleziono la lettera dall'HTML
-const lettera = document.getElementById("text")
+const lettera = document.getElementById("text-smile")
 
 function setup(){
   createCanvas(windowWidth,windowHeight);
