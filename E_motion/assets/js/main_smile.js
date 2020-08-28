@@ -6,7 +6,7 @@ let micLevelSmooth = 0;
 const lettera = document.getElementById("demo-text")
 
 function setup(){
-  createCanvas(windowWidth,windowHeight);
+  // createCanvas(windowWidth,windowHeight);
   mic = new p5.AudioIn()
   mic.start();
 }
@@ -21,7 +21,7 @@ function draw(){
   const d = micLevelSmooth * 50
 
   //dimesnione font
-  lettera.style["font-size"] = "500px";
+  lettera.style["font-size"] = "200em";
 
   //rimane in ascolto delle mosse del mouse e se ci fossero fanno quello che dice la funzione
   // document.addEventListener("mousemove", function(e){
