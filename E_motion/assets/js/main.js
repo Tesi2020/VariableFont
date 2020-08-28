@@ -49,13 +49,13 @@ function draw(){
   //   }
   // })
 
-  bSlider.addEventListener("click", ()=> {
-    if(bVoice.dataset.over == "true"){
-      bMouse.dataset.over = "false"
-    }else{
-      bVoice.dataset.over ="false"
-    }
-  })
+  // bSlider.addEventListener("click", ()=> {
+  //   if(bVoice.dataset.over == "true"){
+  //     bMouse.dataset.over = "false"
+  //   }else{
+  //     bVoice.dataset.over ="false"
+  //   }
+  // })
 
   // if(bVoice.dataset.over == "false"){
   //   slider()  
