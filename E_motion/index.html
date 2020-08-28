@@ -89,21 +89,6 @@
       content: "";
     }
 
-    .orange-bar {
-      position: absolute;
-      height: 2.5px;
-      top: 42.4vw;
-      left: 0;
-      width: 100%;
-      background: none;
-      /*background-color: red;*/
-    }
-
-    .orange-juice {
-      height: 2.5px;
-      background-color: white;
-    }
-
     .timeline__drag {
         width: 1px;
         height: 20px;
@@ -114,29 +99,28 @@
         transform-origin: 0 0;
       }
 
-
       #custom-seekbar
       {  
         cursor: pointer;
-        height: 10px;
+        height: 3px;
         margin-bottom: 10px;
-        outline: thin solid orange;
+        outline: none;
         overflow: hidden;
         position: relative;
-        width: 400px;
+        width: 100%;
       }
       #custom-seekbar span
       {
-        background-color: orange;
+        background-color: white;
         position: absolute;
         top: 0;
         left: 0;
-        height: 10px;
+        height: 3px;
         width: 0px;
       }
 
-      /* following rule is for hiding Stack Overflow's console  */
-      .as-console-wrapper{ display: none !important;}
+/* following rule is for hiding Stack Overflow's console  */
+.as-console-wrapper{ display: none !important;}
 
   </style>
 </head>
@@ -152,24 +136,26 @@
       </div>
     </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<div id="custom-seekbar">
-  <span></span>
-</div>
+<div class="containerVideo">
 
-    <div class="containerVideo">
-      <div class="c-video">
-        <video class="video" src="Movie.mp4"></video>
-        <div class="controls">
-          <div class="buttonsPlayPause">
-            <button id="play-pause"></button>
-          </div>
-          <div class="orange-bar">
-            <div class="orange-juice"></div>
-          </div>
-        </div>
+<div class="c-video">
+
+<video id="video" width="100%">
+    <source class="video" src="https://tesi2020.github.io/VariableFont/E_motion/Movie.mp4" type="video/mp4">
+</video>
+
+<div class="controls">
+    <div class="buttonsPlayPause">
+      <button id="play-pause"></button>
       </div>
     </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<div style="position: absolute; bottom: 6.8rem;"id="custom-seekbar">
+  <span></span>
+</div>
 
 <main class="container">
     <div id="elements">
