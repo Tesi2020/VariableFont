@@ -14,7 +14,7 @@ function draw(){
   micLevelSmooth += (micLevel - micLevelSmooth) * 0.08;
   // const width = window.innerWidth
   // const height = window.innerHeight
-  const d = micLevelSmooth * 150
+  const d = micLevelSmooth;
 
   smile.style["font-variation-settings"] = " 'SAJO' " + d + "," + " 'ANFE' " + 0 + "," + " 'DITR' " + 0 + "," + " 'ANSU' " + 0;
 }
