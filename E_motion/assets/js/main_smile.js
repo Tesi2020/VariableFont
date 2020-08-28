@@ -12,10 +12,12 @@ function setup(){
 function draw(){
   let micLevel = mic.getLevel() * 100;
   micLevelSmooth += (micLevel - micLevelSmooth) * 0.08;
-  const fontSize = micLevelSmooth * 0.08;
+  // const width = window.innerWidth
+  // const height = window.innerHeight
+  const d = micLevelSmooth * 150
 
-  smile.style["font-size"] = 9 + fontSize + "rem";
-}
+  smile.style["font-variation-settings"] = " 'SAJO' " + d + "," + " 'ANFE' " + 0 + "," + " 'DITR' " + 0 + "," + " 'ANSU' " + 0;
+
 
 window.addEventListener("deviceorientation", function(event) {
     alpha = event.alpha;
