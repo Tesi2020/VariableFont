@@ -6,7 +6,7 @@ const letter = document.getElementById("text");
 // const letterAbout = document.getElementById("text-about");
 const bVoice = document.querySelector("#btnVoice");
 const noVoice = document.querySelector("#btnVoice");
-const bMouse = document.querySelector("#btnMouse");
+// const bMouse = document.querySelector("#btnMouse");
 const bSlider = document.querySelector("#btnSlider");
 
 // bVoice.addEventListener("click", voice);
@@ -33,13 +33,13 @@ function draw(){
     }
   })
 
-  bMouse.addEventListener("click", ()=> {
-    if(bMouse.dataset.over == "false"){
-      bMouse.dataset.over = "true"
-    }else{
-      bMouse.dataset.over ="true"
-    }
-  })
+  // bMouse.addEventListener("click", ()=> {
+  //   if(bMouse.dataset.over == "false"){
+  //     bMouse.dataset.over = "true"
+  //   }else{
+  //     bMouse.dataset.over ="true"
+  //   }
+  // })
 
   // bSlider.addEventListener("click", ()=> {
   //   if(bSlider.dataset.over == "false"){
@@ -50,18 +50,18 @@ function draw(){
   // })
 
   bSlider.addEventListener("click", ()=> {
-    if(bMouse.dataset.over == "true"){
+    if(bVoice.dataset.over == "true"){
       bMouse.dataset.over = "false"
     }else{
-      bMouse.dataset.over ="false"
+      bVoice.dataset.over ="false"
     }
   })
 
-  if(bMouse.dataset.over == "false"){
-    slider()  
-  }else if(bMouse.dataset.over == "true"){
-    mouse()
-  }
+  // if(bVoice.dataset.over == "false"){
+  //   slider()  
+  // }else if(bMouse.dataset.over == "true"){
+  //   voice()
+  // }
 
   if(bVoice.dataset.over == "false"){
     slider()  
@@ -91,18 +91,18 @@ function voice(){
   // letter.style.transform = "translateY(-" + fontSize*0.7 + "px)";
 }
 
-function mouse(){
-  bMouse.classList.add("active")
-  // bMouse.classList.add("hover")
-  bSlider.classList.remove("active")
-  // bVoice.classList.add("active")
-  var a= map(mouseY,0,height,-100,100);
-  var b= map(mouseX,0,height,-100,100);
-  var c= map(mouseX,0,width,-100,100);
-  var d= map(mouseX,0,height,-100,100);
-  //letterAbout.style["font-variation-settings"] = " 'ANFE' " + c + "," + " 'SAJO' " + a + "," + " 'DITR' " + b + "," + " 'ANSU' " + d;
-  letter.style["font-variation-settings"] = " 'ANFE' " + c + "," + " 'SAJO' " + a + "," + " 'DITR' " + b + "," + " 'ANSU' " + d;
-}
+// function mouse(){
+//   bMouse.classList.add("active")
+//   // bMouse.classList.add("hover")
+//   bSlider.classList.remove("active")
+//   // bVoice.classList.add("active")
+//   var a= map(mouseY,0,height,-100,100);
+//   var b= map(mouseX,0,height,-100,100);
+//   var c= map(mouseX,0,width,-100,100);
+//   var d= map(mouseX,0,height,-100,100);
+//   //letterAbout.style["font-variation-settings"] = " 'ANFE' " + c + "," + " 'SAJO' " + a + "," + " 'DITR' " + b + "," + " 'ANSU' " + d;
+//   letter.style["font-variation-settings"] = " 'ANFE' " + c + "," + " 'SAJO' " + a + "," + " 'DITR' " + b + "," + " 'ANSU' " + d;
+// }
 
 function slider() {
   bSlider.classList.add("active")

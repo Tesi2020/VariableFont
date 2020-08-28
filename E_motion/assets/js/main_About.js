@@ -54,7 +54,7 @@ function draw(){
 function voice(){
   bVoice.classList.add("active")
   let micLevel = mic.getLevel() * 100;
-  micLevelSmooth += (micLevel - micLevelSmooth) * 0.008;
+  micLevelSmooth += (micLevel - micLevelSmooth) * 0.04;
   const fontSize = micLevelSmooth * 0.008;
   letter.style["font-size"] = 2 + fontSize + "rem";
 }
