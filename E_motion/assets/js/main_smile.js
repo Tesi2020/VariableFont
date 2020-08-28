@@ -21,7 +21,7 @@ function draw(){
   const d = micLevelSmooth * 50
 
   //dimesnione font
-  lettera.style["font-size"] = "10px";
+  lettera.style["font-size"] = "200px";
 
   //rimane in ascolto delle mosse del mouse e se ci fossero fanno quello che dice la funzione
   // document.addEventListener("mousemove", function(e){
