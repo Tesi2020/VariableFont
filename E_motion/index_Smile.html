@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
 	<meta charset="utf-8">
-	<title>Smile</title>
+	<title>☺</title>
 	<meta name="description" 							content="A">
 	<meta name="author"                       			content="Chiara">
 	<meta name="viewport" 								content="width=device-width, initial-scale=1">
@@ -13,39 +13,61 @@
 	<meta name="apple-mobile-web-app-status-bar-style" 	content="black">
 	<link rel="stylesheet"       href="assets/css/style.css">
 
+	<style type="text/css">
+		body{
+			background-color: black;
+			color: white;	
+		}
+
+		@font-face {
+			font-family: 'E_motion';
+			src: url('E_motionGX.ttf') format('truetype-variations');
+			font-stretch: 75% 100%;
+			font-style: oblique 0deg 12deg;
+			font-weight: 100 900;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text {
+			position: absolute;
+			width: 100vw;
+			height:100vh;
+			font-family: "E_motion", sans-serif;
+			text-align: center;
+			color: white;
+			margin: 0;
+
+			font-SAJO: var(--text-SAJO);
+		  	font-ANFE: var(--text-ANFE);
+		  	font-DITR: var(--text-DITR);
+		  	font-ANSU: var(--text-ANSU);
+		  	
+		  	font-variation-settings: "SAJO" var(--text-SAJO), "DITR" var(--text-DITR), "ANFE" var(--text-ANFE), "ANSU" var(--text-ANSU);
+		}
+
+	</style>
+
 </head>
 
 <body class="disable-select disable-scroll">
 
-<main class="buttonVariable">  
-  <div id="myDIV">
-  </div>
-</main>
-
-<main class="container">
-    <div id="elements">
-    <div id="text" style="font-size: 20vw;">
-      <p style="display: flex; justify-content: center; align-items: center; position:absolute; height: 50vw; border: none; outline: none; width: 100vw; background: none; z-index: 10 !important;"contenteditable="true" class="smile-text" id="text">☺</p>
-    </div>
-    </div>
-  </main>
+	
+	<div id="text">☺</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+	<script src="assets/js/main_smile.js"></script>
 
 	<!-- Listener che blocca il "bounce" -->
-<!-- 	<script type="text/javascript">
+	<script type="text/javascript">
 		document.ontouchmove = function(e){
 			e.preventDefault();
 		}
 		document.ontouchmove = function(e){
 		 	e.preventDefault();
 		}
-	</script> -->
+	</script>
 	<div class="debug"></div>
-
-	<script src="assets/js/main_smile.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
 
 </body>
 </html>
