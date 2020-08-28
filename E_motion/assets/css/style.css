@@ -129,6 +129,23 @@ a .active {
   z-index: -10 !important;
 }
 
+.smile-text {
+  font-family: "E_motion", sans-serif;
+
+  /*font-size: "font-size";*/
+  /*font-size: 10rem;*/
+  font-SAJO: var(--text-SAJO);
+  font-ANFE: var(--text-ANFE);
+  font-DITR: var(--text-DITR);
+  font-ANSU: var(--text-ANSU);
+  font-variation-settings: "SAJO" var(--text-SAJO), "DITR" var(--text-DITR), "ANFE" var(--text-ANFE), "ANSU" var(--text-ANSU);
+
+  background-color: black;
+  color: white;
+
+  z-index: -10 !important;
+}
+
 .about-text {
   font-family: "E_motion", sans-serif;
   display: flex;
