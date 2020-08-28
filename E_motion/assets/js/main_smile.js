@@ -1,24 +1,24 @@
-let mic
+let mic;
 let micInit = false;
 let micLevelSmooth = 0;
 
 //seleziono la lettera dall'HTML
-const lettera = document.getElementById("text-smile")
+const lettera = document.getElementById("smile-text");
 
 function setup(){
   createCanvas(windowWidth,windowHeight);
-  mic = new p5.AudioIn()
+  mic = new p5.AudioIn();
   mic.start();
 }
 
 function draw(){
   let micLevel = mic.getLevel() * 100;
-  micLevelSmooth += (micLevel - micLevelSmooth) * 0.08
+  micLevelSmooth += (micLevel - micLevelSmooth) * 0.08;
   //miusra dimensioni pagina
-  const width = window.innerWidth
-  const height = window.innerHeight
+  const width = window.innerWidth;
+  const height = window.innerHeight;
   // const s = min(width, height) / 50
-  const d = micLevelSmooth * 50
+  const d = micLevelSmooth * 100;
 
   //dimesnione font
   lettera.style["font-size"] = "200px";
@@ -53,5 +53,5 @@ function touchStarted() {
 }
 
 function windowResized(){
-  resizeCanvas(windowWidth, windowHeight)
+  resizeCanvas(windowWidth, windowHeight);
 }
