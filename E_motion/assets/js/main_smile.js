@@ -18,7 +18,7 @@ function draw(){
   const width = window.innerWidth
   const height = window.innerHeight
   // const s = min(width, height) / 50
-  const d = micLevelSmooth * 5;
+  const d = micLevelSmooth * 10;
 
   //dimesnione font
   lettera.style["font-size"] = "50rem";
