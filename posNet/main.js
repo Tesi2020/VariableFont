@@ -61,7 +61,7 @@ function draw() {
   //posLevelSmooth += (size.x - posLevelSmooth) * 0.09
   //lettera.style["font-size"] = 500 + "px"; 
   // blocca alla dimensione massima
-  let sizeFont= map(size.x/5,180,430,75,200)
+  let sizeFont= map(size.x/5,100,1500,30,200)
   if(sizeFont > 201) {
       lettera.style["font-size"] = 200 + "px"; 
   } else{
@@ -70,6 +70,7 @@ function draw() {
 
 
  console.log(size.x/5)
+ console.log()
   //misuro dimensioni pagina per JS
   //const width = window.innerWidth
   //const height = window.innerHeight
@@ -85,26 +86,18 @@ function draw() {
   //map
   const w = deep / width * 1000.0
   //mappa il livello di  distanza deep con i valori del font variabile
-  const prova = floor(map(size.x/5,200,430,0,300))
+  const prova = floor(map(size.x/5,100,1500,0,300))
   const c = x / width * 1000.0
 
   //Il CSS che va a modificare
   lettera.style["font-variation-settings"] = " 'SIZE' " + prova
   //+ "," + " 'CONT' " + c;
 
-  if (size.x/5< 100){
-  // var theDiv = document.getElementById("text");
-  // var content = document.createTextNode("da scrivere");
-  // theDiv.appendChild(content)
-  // var div = document.getElementById('text');
-
-  // div.innerHTML += 'Extra stuff';
-
-  }
+ 
 
   //per trasformare la posizione e inserire la lettera centrale 
   //heightLetter deve avere lo stesso valore di "font-size"
-  if (size.x/5 > 201){
+  if (sizeFont > 201){
   lettera.style.transform = "translateY(-" + 200 *0.7 + "px)";
 } else {lettera.style.transform = "translateY(-" + sizeFont*0.7 + "px)";
 
