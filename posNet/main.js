@@ -61,7 +61,7 @@ function draw() {
   //posLevelSmooth += (size.x - posLevelSmooth) * 0.09
   //lettera.style["font-size"] = 500 + "px"; 
   // blocca alla dimensione massima
-  let sizeFont= map(size.x/5,100,1500,30,200)
+  let sizeFont= map(size.x/5,600,1500,30,200)
   if(sizeFont > 201) {
       lettera.style["font-size"] = 200 + "px"; 
   } else{
@@ -86,7 +86,7 @@ function draw() {
   //map
   const w = deep / width * 1000.0
   //mappa il livello di  distanza deep con i valori del font variabile
-  const prova = floor(map(size.x/5,100,1500,0,300))
+  const prova = floor(map(size.x/5,600,1500,0,300))
   const c = x / width * 1000.0
 
   //Il CSS che va a modificare
